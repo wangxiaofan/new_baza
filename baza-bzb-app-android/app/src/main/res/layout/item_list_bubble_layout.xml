@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/dp_5">
+
+    <CheckBox
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_24"
+        android:background="@drawable/resume_search_cb_bg_job_hunter"
+        android:gravity="center"
+        android:button="@null"
+        android:paddingLeft="@dimen/dp_5"
+        android:paddingRight="@dimen/dp_5"
+        android:text="只看未浏览"
+        android:textColor="@drawable/text_color_resume_search_job_hunter"
+        android:textSize="12sp" />
+</LinearLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheckBox xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/login_interested_talent_type_cb_bg"
+    android:button="@null"
+    android:gravity="center"
+    android:paddingLeft="@dimen/dp_10"
+    android:paddingRight="@dimen/dp_10"
+    android:textColor="@drawable/text_color_checker_account_resume_classfy_menu"
+    android:textSize="@dimen/text_size_11" />

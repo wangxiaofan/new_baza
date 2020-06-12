@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_container"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/image_background_friend_menu"
+    android:divider="@drawable/menu_linearlayout_divider"
+    android:showDividers="middle"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" />

@@ -1,0 +1,4 @@
+<resources>
+    <string name="please_wait">请稍等&#8230;</string>
+    <string name="open_file_error">您的设备无法打开此类型的文件</string>
+</resources>

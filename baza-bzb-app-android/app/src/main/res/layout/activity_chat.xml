@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_bar_default_left_imageview_right_textview" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_onLineStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_red_900515"
+            android:gravity="center"
+            android:padding="@dimen/dp_10"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_12"
+            android:visibility="gone" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.handmark.pulltorefresh.library.PullToRefreshListView
+                android:id="@+id/pull_to_refresh_listView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@null"
+                android:dividerHeight="@dimen/dp_20"
+                android:listSelector="@android:color/transparent" />
+
+            <ViewStub
+                android:id="@+id/viewStub_voice_record_info_ui"
+                android:layout_width="@dimen/voice_record_show_info_ui_wh"
+                android:layout_height="@dimen/voice_record_show_info_ui_wh"
+                android:layout_gravity="center"
+                android:layout="@layout/layout_voice_record_info_ui" />
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/view_bottom_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_default_with_top_line"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingRight="@dimen/dp_10">
+
+            <ImageView
+                android:id="@+id/iv_switch_chat_voice_or_text"
+                android:layout_width="@dimen/dp_30"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:onClick="onClick"
+                android:scaleType="centerInside"
+                android:src="@drawable/icon_voice_chat" />
+
+            <Button
+                android:id="@+id/btn_send"
+                android:layout_width="@dimen/dp_40"
+                android:layout_height="match_parent"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_10"
+                android:background="@drawable/login_login_btn_bg"
+                android:onClick="onClick"
+                android:text="@string/send"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_size_11"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/iv_chose_other"
+                android:layout_width="@dimen/dp_30"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:clickable="true"
+                android:onClick="onClick"
+                android:scaleType="centerInside"
+                android:src="@drawable/icon_chose_other_message" />
+
+            <ImageView
+                android:id="@+id/iv_chose_emotion"
+                android:layout_width="@dimen/dp_50"
+                android:layout_height="match_parent"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginRight="@dimen/dp_30"
+                android:clickable="true"
+                android:onClick="onClick"
+                android:scaleType="centerInside"
+                android:src="@drawable/icon_emotion_entrance" />
+
+            <EditText
+                android:id="@+id/et_msg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:layout_marginLeft="@dimen/dp_40"
+                android:layout_marginRight="@dimen/dp_80"
+                android:layout_marginTop="@dimen/dp_10"
+                android:background="@null"
+                android:hint="@string/input_chat_msg"
+                android:maxLength="500"
+                android:paddingLeft="@dimen/dp_5"
+                android:paddingRight="@dimen/dp_5"
+                android:singleLine="true"
+                android:textColor="@color/text_color_blue_0D315C"
+                android:textColorHint="@color/text_color_grey_94A1A5"
+                android:textCursorDrawable="@drawable/edit_text_default_cursor"
+                android:textSize="@dimen/text_size_12" />
+
+            <TextView
+                android:id="@+id/tv_voice_press_to_speak"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:layout_marginLeft="@dimen/dp_40"
+                android:layout_marginTop="@dimen/dp_10"
+                android:background="@drawable/shape_background_chat_voice_nomal"
+                android:gravity="center"
+                android:text="@string/press_to_speak"
+                android:textColor="@color/text_color_black_4E5968"
+                android:textSize="@dimen/text_size_12"
+                android:visibility="gone" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/fl_menu_more"
+            android:layout_width="match_parent"
+            android:layout_height="205dp"
+            android:background="@drawable/background_default_with_top_line"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/menu_send_image"
+                android:layout_width="83dp"
+                android:layout_height="wrap_content"
+                android:drawablePadding="5dp"
+                android:drawableTop="@drawable/image_message_send_image"
+                android:gravity="center_horizontal"
+                android:paddingTop="10dp"
+                android:text="@string/alum"
+                android:textColor="@color/text_color_black_666666"
+                android:textSize="@dimen/text_size_11"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/menu_send_file"
+                android:layout_width="83dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="83dp"
+                android:drawablePadding="5dp"
+                android:drawableTop="@drawable/image_message_send_file"
+                android:gravity="center_horizontal"
+                android:paddingTop="10dp"
+                android:text="@string/send_file"
+                android:textColor="@color/text_color_black_666666"
+                android:textSize="@dimen/text_size_11"
+                android:visibility="gone" />
+
+            <com.baza.android.bzw.widget.emotion.EmoticonPickerView
+                android:id="@+id/emoticonPickerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+        </FrameLayout>
+    </LinearLayout>
+
+</LinearLayout>

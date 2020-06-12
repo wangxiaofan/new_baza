@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_default_with_bottom_line"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/fl_search_entrance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/name_list_search_entrance_bg"
+        android:clickable="true"
+        android:onClick="onClick"
+        android:paddingLeft="@dimen/dp_20"
+        android:paddingTop="@dimen/dp_10"
+        android:paddingRight="@dimen/dp_20"
+        android:paddingBottom="@dimen/dp_10">
+
+        <TextView
+            android:id="@+id/tv_do_search"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/default_edit_text_height"
+            android:layout_gravity="center"
+            android:drawableLeft="@drawable/icon_search_logo"
+            android:drawablePadding="@dimen/dp_10"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:hint="@string/seek_job_prediction_hint"
+            android:maxLines="1"
+            android:paddingLeft="@dimen/dp_30"
+            android:paddingRight="@dimen/dp_30"
+            android:textColor="@color/text_color_blue_0D315C"
+            android:textColorHint="@color/text_color_grey_94A1A5"
+            android:textSize="@dimen/text_size_11" />
+    </FrameLayout>
+</LinearLayout>
+

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_horizontal"
+        android:text="拒绝原因"
+        android:textColor="#0D315C"
+        android:textSize="@dimen/text_size_13" />
+
+    <LinearLayout
+        android:id="@+id/ll_conent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/et_content"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_94"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@drawable/shape_rc_0_nosolid_stoken_grey"
+        android:gravity="top"
+        android:maxLength="200"
+        android:padding="5dp"
+        android:textColor="@color/text_color_black_666666"
+        android:textColorHint="@color/edit_text_hint_color_C0CADB"
+        android:textCursorDrawable="@drawable/edit_text_default_cursor"
+        android:textSize="@dimen/text_size_11" />
+</LinearLayout>

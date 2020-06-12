@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.baza.android.bzw.widget.ClearEditText
+        android:id="@+id/et_search_key"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_30"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_10"
+        android:background="@drawable/round_conner_shape_gray"
+        android:drawableLeft="@drawable/icon_search_logo"
+        android:drawablePadding="@dimen/dp_10"
+        android:gravity="center_vertical"
+        android:hint="@string/search_local_friend"
+        android:paddingLeft="@dimen/dp_10"
+        android:paddingRight="@dimen/dp_10"
+        android:singleLine="true"
+        android:textColor="@color/text_color_blue_0D315C"
+        android:textColorHint="@color/text_color_grey_94A1A5"
+        android:textSize="@dimen/text_size_12" />
+</FrameLayout>

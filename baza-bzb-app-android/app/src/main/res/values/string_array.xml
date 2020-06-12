@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="city_classify">
+        <item>#</item>
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+        <item>D</item>
+        <item>E</item>
+        <item>F</item>
+        <item>G</item>
+        <item>H</item>
+        <item>I</item>
+        <item>J</item>
+        <item>K</item>
+        <item>L</item>
+        <item>M</item>
+        <item>N</item>
+        <item>O</item>
+        <item>P</item>
+        <item>Q</item>
+        <item>R</item>
+        <item>S</item>
+        <item>T</item>
+        <item>U</item>
+        <item>V</item>
+        <item>W</item>
+        <item>X</item>
+        <item>Y</item>
+        <item>Z</item>
+    </string-array>
+    <string-array name="hot_city_codes">
+        <item>416</item>
+        <item>643</item>
+        <item>432</item>
+        <item>431</item>
+        <item>656</item>
+        <item>469</item>
+        <item>571</item>
+        <item>738</item>
+        <item>685</item>
+        <item>520</item>
+        <item>572</item>
+        <item>647</item>
+        <item>608</item>
+        <item>468</item>
+    </string-array>
+    <string-array name="advance_search_work_years_options">
+        <!--不要求,3年及以下、3-5年、5-10年、10年以上。-->
+        <item>3年及以内</item>
+        <item>3&#8211;5年</item>
+        <item>5&#8211;10年</item>
+        <item>10年以上</item>
+    </string-array>
+    <string-array name="advance_search_school_options">
+        <item>211</item>
+        <item>985</item>
+        <item>211+985</item>
+    </string-array>
+    <!--<string-array name="advance_search_source_options">-->
+    <!--<item>本地上传</item>-->
+    <!--<item>智联招聘</item>-->
+    <!--<item>51job</item>-->
+    <!--<item>猎聘</item>-->
+    <!--<item>分享</item>-->
+    <!--<item>邮箱</item>-->
+    <!--<item>谷露</item>-->
+    <!--<item>导入</item>-->
+    <!--<item>行业List</item>-->
+    <!--<item>拉勾</item>-->
+    <!--<item>小猎手</item>-->
+    <!--<item>智联卓聘</item>-->
+    <!--</string-array>-->
+
+    <string-array name="advance_search_source_options_normal">
+        <item>本地上传</item>
+        <item>智联招聘</item>
+        <item>51job</item>
+        <item>猎聘</item>
+        <item>分享</item>
+        <item>邮箱</item>
+        <item>谷露</item>
+        <item>导入</item>
+        <item>本地其他</item>
+        <item>拉勾</item>
+        <item>小猎手</item>
+        <item>智联卓聘</item>
+    </string-array>
+
+    <string-array name="advance_degree_sex_options">
+        <item>男</item>
+        <item>女</item>
+    </string-array>
+    <string-array name="degree_level">
+        <item>高中及以下</item>
+        <item>大专</item>
+        <item>本科</item>
+        <item>硕士</item>
+        <item>MBA</item>
+        <item>博士</item>
+    </string-array>
+    <string-array name="remark_selector">
+        <item>语音记录</item>
+        <item>文字记录</item>
+    </string-array>
+    <string-array name="remark_edit_menu_default">
+        <item>编辑</item>
+        <item>删除</item>
+    </string-array>
+    <string-array name="remark_edit_menu_default_wuxiao">
+        <item>删除</item>
+    </string-array>
+    <string-array name="remark_edit_menu_audio_mine">
+        <item>""</item>
+        <item>编辑</item>
+        <item>删除</item>
+    </string-array>
+    <string-array name="remark_edit_menu_audio_company">
+        <item>""</item>
+        <item>删除</item>
+    </string-array>
+    <string-array name="menu_candidate_edit_more_normal">
+        <item>编辑</item>
+        <item>删除</item>
+        <item>更新日志</item>
+    </string-array>
+    <string-array name="long_click_phone_number_valid">
+        <item>拨打电话</item>
+        <item>发送短信</item>
+        <item>标记失效</item>
+        <item>复制</item>
+    </string-array>
+    <string-array name="long_click_phone_number_invalid">
+        <item>拨打电话</item>
+        <item>发送短信</item>
+        <item>复制</item>
+    </string-array>
+    <string-array name="long_click_email_valid">
+        <item>发送邮件</item>
+        <item>标记失效</item>
+        <item>复制</item>
+    </string-array>
+    <string-array name="long_click_email_invalid">
+        <item>发送邮件</item>
+        <item>复制</item>
+    </string-array>
+    <string-array name="ce_self_candidate_item_names">
+        <item>姓\&#12288;\&#12288;名：</item>
+        <item>性\&#12288;\&#12288;别：</item>
+        <item>工作年限：</item>
+        <item>所在地区：</item>
+        <item>学\&#12288;\&#12288;历：</item>
+        <item>所在公司：</item>
+        <item>职\&#12288;\&#12288;位：</item>
+        <item>联系电话：</item>
+        <item>邮\&#12288;\&#12288;箱：</item>
+        <!--<item>人才备注：</item>-->
+    </string-array>
+
+    <!--<string-array name="ce_pc_candidate_item_names">-->
+    <!--<item>姓&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;名：</item>-->
+    <!--<item>职&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;位：</item>-->
+    <!--<item>所在公司：</item>-->
+    <!--<item>所在地区：</item>-->
+    <!--<item>工作年限：</item>-->
+    <!--<item>联系电话：</item>-->
+    <!--<item>邮&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;箱：</item>-->
+    <!--&lt;!&ndash;<item>人才备注：</item>&ndash;&gt;-->
+    <!--</string-array>-->
+
+    <string-array name="ce_self_candidate_item_hints">
+        <item>输入姓名（必填）</item>
+        <item>设置性别</item>
+        <item>设置工作年限</item>
+        <item>设置城市</item>
+        <item>设置学历</item>
+        <item>输入公司名</item>
+        <item>输入职位名称</item>
+        <item>输入手机号（必填）</item>
+        <item>设置邮箱</item>
+        <!--<item>输入简要备注信息</item>-->
+    </string-array>
+    <!--<string-array name="ce_pc_candidate_item_hints">-->
+    <!--<item>输入姓名（必填）</item>-->
+    <!--<item>输入职位名称</item>-->
+    <!--<item>输入公司名</item>-->
+    <!--<item>设置城市</item>-->
+    <!--<item>设置工作年限</item>-->
+    <!--<item>输入手机号（必填）</item>-->
+    <!--<item>设置邮箱</item>-->
+    <!--&lt;!&ndash;<item>输入简要备注信息</item>&ndash;&gt;-->
+    <!--</string-array>-->
+    <string-array name="resume_self_built_ids">
+        <item>@id/resume_item_id_name</item>
+        <item>@id/resume_item_id_sex</item>
+        <item>@id/resume_item_id_workYear</item>
+        <item>@id/resume_item_id_city</item>
+        <item>@id/resume_item_id_degree</item>
+        <item>@id/resume_item_id_company</item>
+        <item>@id/resume_item_id_job</item>
+        <item>@id/resume_item_id_contact</item>
+        <item>@id/resume_item_id_email</item>
+    </string-array>
+    <!--<string-array name="resume_pc_built_ids">-->
+    <!--<item>@id/resume_item_id_name</item>-->
+    <!--<item>@id/resume_item_id_job</item>-->
+    <!--<item>@id/resume_item_id_company</item>-->
+    <!--<item>@id/resume_item_id_city</item>-->
+    <!--<item>@id/resume_item_id_workYear</item>-->
+    <!--<item>@id/resume_item_id_contact</item>-->
+    <!--<item>@id/resume_item_id_email</item>-->
+    <!--</string-array>-->
+    <string-array name="new_candidate_sex_options">
+        <item>未知</item>
+        <item>男</item>
+        <item>女</item>
+    </string-array>
+
+    <string-array name="update_engine_question">
+        <item>Q:什么是简历更新？</item>
+        <item>Q：什么是一键更新？</item>
+        <item>Q：如何对特定的简历进行更新？</item>
+        <item>Q：一键更新后怎么查看更新效果？</item>
+        <item>Q：什么是简历分数？</item>
+        <item>Q:简历的分数怎么算？</item>
+        <item>Q:更新是怎么样的更新？</item>
+        <item>Q:你的今日额度是怎么计算的？</item>
+        <item>Q:如何获得更高额度？</item>
+    </string-array>
+    <string-array name="update_engine_answer">
+        <item>基于人工智能和大数据，将你存储的人才简历更新为更完整、更新鲜的版本。</item>
+        <item>一键帮你将完整度最低的XX份简历更新至最新、最完整的版本。XX为你的今日剩余额度。</item>
+        <item>你可以：\n1）在【我的人才】中搜索到某特定人才，打开其简历详情页点击【更新】。\n2）在【发现】&#8212;>【人才更新】中打开某简历详情页点击【更新】。</item>
+        <item>1）点击【更新记录】可以查看所有更新记录及本次更新前后分数。\n2）在更新记录中点击某份简历查看详情，标黄的为本次更新内容。</item>
+        <item>简历分数就是对简历完整度和新鲜度的度量。可以简单理解为：越完整、越新的简历得分越高。</item>
+        <item>通过结构化简历内容，对简历的基本信息／工作经历／项目经历／教育经历等按照一定比例权重进行对应的评分计算。</item>
+        <item>对简历内容的补充，缺少一项工作经历，缺少所在城市，通过其他用户做的更新补充进来。</item>
+        <item>根据你的用户等级，有相对应的额度特权。</item>
+        <item>发生更多存储管理业务，增加经验值刷等级。</item>
+    </string-array>
+
+    <string-array name="email_suffix_list">
+        <item>\@gmail.com</item>
+        <item>\@qq.com</item>
+        <item>\@163.com</item>
+        <item>\@126.com</item>
+        <item>\@yeah.net</item>
+        <item>\@sina.com</item>
+        <item>\@139.com</item>
+        <item>\@189.n</item>
+        <item>\@outlook.com</item>
+        <item>\@sohu.com</item>
+        <item>\@sina.cn</item>
+        <item>\@aliyun.com</item>
+        <item>\@yahoo.com</item>
+        <item>\@21cn.com</item>
+    </string-array>
+    <string-array name="email_unknow_type_list">
+        <item>网易</item>
+        <item>腾讯</item>
+        <item>阿里云</item>
+        <item>263</item>
+        <item>其他</item>
+    </string-array>
+    <string-array name="resume_search_sort_mine">
+        <item>默认排序</item>
+        <item>按简历完整度</item>
+        <item>按更新时间</item>
+        <item>按入库时间</item>
+    </string-array>
+    <string-array name="company_search_sort_mine">
+        <item>综合排序</item>
+        <item>更新时间排序</item>
+    </string-array>
+    <string-array name="tracking_search_sort_mine">
+        <item>综合排序</item>
+        <item>操作时间排序</item>
+        <item>加入时间排序</item>
+    </string-array>
+    <string-array name="tracking_search_filter_type">
+        <item>我查看联系方式的</item>
+        <item>我打过电话的</item>
+        <item>我添加寻访的</item>
+        <item>我推荐的</item>
+        <item>我创建的</item>
+        <item>我更新的</item>
+        <item>我收藏的</item>
+        <item>我加入待沟通的</item>
+        <item>未接电话</item>
+        <item>暂不方便接听</item>
+        <item>未完成事项</item>
+        <item>看职业机会</item>
+        <item>离职状态</item>
+        <item>最近被推荐的</item>
+        <item>我0推的</item>
+        <item>我1推的</item>
+        <item>我多推的</item>
+        <item>我沟通过的</item>
+    </string-array>
+
+    <string-array name="account_count_view_titles_normal">
+        <item>简历数</item>
+        <item>更新数</item>
+        <!--<item>请求数</item>-->
+        <!--<item>分享数</item>-->
+    </string-array>
+
+    <!--<string-array name="account_resume_classify_menu">-->
+    <!--<item>全部</item>-->
+    <!--<item>他人分享</item>-->
+    <!--<item>list领取</item>-->
+    <!--<item>list匹配</item>-->
+    <!--<item>本地导入</item>-->
+    <!--<item>渠道导入</item>-->
+    <!--<item>已删除</item>-->
+    <!--</string-array>-->
+    <string-array name="account_resume_classify_menu_normal">
+        <item>全部</item>
+        <item>他人分享</item>
+        <item>本地其他</item>
+        <!--<item>list匹配</item>-->
+        <item>本地导入</item>
+        <item>渠道导入</item>
+        <item>已删除</item>
+    </string-array>
+    <string-array name="account_resume_sub_classify_menu_local">
+        <item>不限</item>
+        <item>全盘</item>
+        <item>压缩包</item>
+        <item>本地电脑</item>
+        <item>指定文件夹</item>
+        <item>Excel精准导入</item>
+        <item>Excel本地导入</item>
+    </string-array>
+    <string-array name="account_resume_sub_classify_menu_local_source_path">
+        <item>""</item>
+        <item>WholeDisk</item>
+        <item>Package</item>
+        <item>Local</item>
+        <item>Folder</item>
+        <item>ExcelAccurate</item>
+        <item>ExcelLocal</item>
+    </string-array>
+
+    <string-array name="account_resume_sub_classify_menu_platform">
+        <item>不限</item>
+        <item>猎聘</item>
+        <item>易猎</item>
+        <item>谷露</item>
+        <item>邮箱</item>
+        <item>导入</item>
+        <item>拉勾</item>
+        <item>智联招聘</item>
+        <item>前程无忧</item>
+        <item>智联卓聘</item>
+        <item>被动分享</item>
+        <item>主动分享</item>
+        <item>第三方导入</item>
+    </string-array>
+
+    <string-array name="account_resume_sub_classify_menu_platform_source_path">
+        <item>""</item>
+        <item>LiePin</item>
+        <item>YiLie</item>
+        <item>Gllue</item>
+        <item>Email</item>
+        <item>Import</item>
+        <item>LaGou</item>
+        <item>ZhiLian</item>
+        <item>51Job</item>
+        <item>ZhiLianHP</item>
+        <item>PassiveShare</item>
+        <item>Share</item>
+        <item>AppAdd</item>
+    </string-array>
+
+    <string-array name="remark_text_label_job_hopping">
+        <item>不考虑机会</item>
+        <item>6个月内不考虑</item>
+        <item>12个月内不考虑</item>
+        <item>看职业机会</item>
+        <item>离职状态</item>
+        <item>刚入职新公司</item>
+        <item>已开始创业</item>
+        <item>该公司最近有裁员传闻/新闻</item>
+    </string-array>
+
+    <string-array name="remark_text_label_hirer_des">
+        <item>知名成熟公司</item>
+        <item>创业早期（天使/A/B/C轮）</item>
+        <item>创业中后期（D/E/F轮）</item>
+        <item>上市公司</item>
+        <item>独角兽/行业巨头</item>
+        <item>外资企业/跨国企业</item>
+        <item>都可以</item>
+    </string-array>
+
+    <string-array name="remark_text_label_expect_salary">
+        <item>20-30W</item>
+        <item>30-50W</item>
+        <item>50-80W</item>
+        <item>80-100W</item>
+        <item>100-150W</item>
+        <item>150-200W</item>
+        <item>200-300W</item>
+        <item>300W以上</item>
+        <item>自定义</item>
+    </string-array>
+
+    <string-array name="default_recommend_content_tag">
+        <item>待联系</item>
+        <item>跟候选人要简历</item>
+        <item>确定面试时间</item>
+        <item>沟通面试辅导</item>
+    </string-array>
+
+    <string-array name="menu_company_detail_more_add">
+        <item>加入trackinglist</item>
+        <item>编辑</item>
+        <item>分享</item>
+    </string-array>
+
+    <string-array name="menu_company_detail_more_remove">
+        <item>移除trackinglist</item>
+        <item>编辑</item>
+    </string-array>
+
+    <string-array name="wuxiao_remark">
+        <item>未接电话</item>
+        <item>无效电话（空号/号码非本人）</item>
+        <item>电话打不通（关机/停机/无法接通）</item>
+        <item>暂不方便接听</item>
+        <item>拒绝与猎头沟通</item>
+    </string-array>
+
+    <string-array name="floating_filter_sort">
+        <item>全部</item>
+        <item>最近一周</item>
+        <item>最近一个月</item>
+        <item>最近三个月</item>
+        <item>最近半年</item>
+        <item>半年以上</item>
+    </string-array>
+
+    <string-array name="floating_status_name">
+        <item>全部</item>
+        <item>未处理</item>
+        <item>已接受</item>
+        <item>面试待安排</item>
+        <item>面试已安排</item>
+        <item>面试已反馈</item>
+        <item>offer</item>
+        <item>入职</item>
+        <item>离职</item>
+        <item>淘汰</item>
+        <item>拒绝</item>
+    </string-array>
+
+    <string-array name="floating_status_name_1">
+        <item>全部</item>
+        <item>待反馈</item>
+        <item>已接受</item>
+        <item>面试待安排</item>
+        <item>面试已安排</item>
+        <item>面试已反馈</item>
+        <item>offer</item>
+        <item>入职</item>
+        <item>离职</item>
+        <item>淘汰</item>
+        <item>拒绝</item>
+    </string-array>
+
+    <string-array name="floating_status_code">
+        <item>-1</item>
+        <item>0</item>
+        <item>1</item>
+        <item>4</item>
+        <item>5</item>
+        <item>7</item>
+        <item>8</item>
+        <item>16</item>
+        <item>32</item>
+        <item>1024</item>
+        <item>2</item>
+    </string-array>
+</resources>

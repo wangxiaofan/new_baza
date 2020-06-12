@@ -1,0 +1,8 @@
+<resources>
+    <dimen name="message_title_text_size">12dp</dimen>
+    <dimen name="message_info_text_size">9.5dp</dimen>
+    <dimen name="button_text_size">11dp</dimen>
+    <dimen name="content_padding_20">12dp</dimen>
+    <dimen name="round_conner_size">4dp</dimen>
+    <dimen name="button_height">32dp</dimen>
+</resources>

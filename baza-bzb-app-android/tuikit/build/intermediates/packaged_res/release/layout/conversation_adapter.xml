@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_left"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="15dp"
+    android:paddingTop="10dp"
+    android:paddingRight="15dp">
+
+    <ImageView
+        android:id="@+id/conversation_icon"
+        android:layout_width="50dp"
+        android:layout_height="50dp" />
+
+    <View
+        android:id="@+id/conversation_unread_min"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/icon_unread_red"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/conversation_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/conversation_icon"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/conversation_icon"
+        android:ellipsize="end"
+        android:maxWidth="150dp"
+        android:singleLine="true"
+        android:textColor="#0D315C"
+        android:textSize="17sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/conversation_title_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_alignBottom="@+id/conversation_title"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/conversation_title"
+        android:background="@drawable/chat_list_label_nb_bg"
+        android:text="内部"
+        android:textColor="#53ABD5"
+        android:textSize="11sp" />
+
+    <TextView
+        android:id="@+id/conversation_last_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/conversation_title"
+        android:layout_alignBottom="@+id/conversation_icon"
+        android:layout_marginRight="40dp"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="#888888"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/conversation_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/conversation_title"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:textColor="#888888"
+        android:textSize="10sp" />
+
+    <com.tencent.qcloud.tim.uikit.component.UnreadCountTextView
+        android:id="@+id/conversation_unread"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/view_line"
+        android:layout_alignBottom="@+id/conversation_last_msg"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:textColor="#fff"
+        android:textSize="10sp" />
+
+
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="wrap_content"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/conversation_icon"
+        android:layout_marginTop="10dp"
+        android:background="#EEEEEE" />
+
+</RelativeLayout>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="1"
+        android:padding="@dimen/dp_5"
+        android:textColor="@color/text_color_blue_0D315C"
+        android:textSize="@dimen/text_size_13" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_company"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/icon_company"
+            android:drawablePadding="@dimen/dp_10"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxEms="16"
+            android:maxLines="1"
+            android:textColor="@color/text_color_black_4E5968"
+            android:textSize="@dimen/text_size_10" />
+
+        <TextView
+            android:id="@+id/tv_city"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/icon_location"
+            android:drawablePadding="@dimen/dp_10"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingRight="@dimen/dp_10"
+            android:paddingTop="@dimen/dp_5"
+            android:textColor="@color/text_color_black_4E5968"
+            android:textSize="@dimen/text_size_10" />
+    </LinearLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_20">
+
+        <ImageView
+            android:id="@+id/iv_update"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_arrow_update"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_current_complete"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:lineSpacingExtra="@dimen/dp_5"
+            android:textColor="@color/text_color_black_4E5968"
+            android:textSize="@dimen/text_size_10"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/iv_update" />
+
+        <TextView
+            android:id="@+id/tv_updated_complete"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:lineSpacingExtra="@dimen/dp_5"
+            android:textColor="@color/text_color_black_4E5968"
+            android:textSize="@dimen/text_size_10"
+            app:layout_constraintLeft_toRightOf="@id/iv_update"
+            app:layout_constraintRight_toRightOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        style="@style/line_horizontal_D3D3D3"
+        android:layout_marginTop="@dimen/dp_20" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_20"
+        android:paddingLeft="@dimen/dp_10"
+        android:text="@string/update_content"
+        android:textColor="@color/text_color_blue_0D315C"
+        android:textSize="@dimen/text_size_13" />
+
+    <FrameLayout
+        android:id="@+id/fl_main_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/dp_10">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="@string/title_fill_user_info"
+            android:textColor="@color/text_color_blue_0D315C"
+            android:textSize="@dimen/text_size_11" />
+
+        <CheckBox
+            android:id="@+id/cb_check_all"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:background="@null"
+            android:button="@null"
+            android:drawableLeft="@drawable/checker_update_content"
+            android:gravity="center"
+            android:paddingBottom="@dimen/dp_15"
+            android:paddingLeft="@dimen/dp_20"
+            android:paddingRight="@dimen/dp_10"
+            android:paddingTop="@dimen/dp_15" />
+    </FrameLayout>
+
+    <View
+        android:id="@+id/view_depart_line"
+        style="@style/line_horizontal_D3D3D3" />
+
+    <LinearLayout
+        android:id="@+id/ll_item_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/dp_20" />
+</LinearLayout>

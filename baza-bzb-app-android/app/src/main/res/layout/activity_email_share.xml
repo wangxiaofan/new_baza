@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_bar_default_left_imageview_right_textview" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_weight="1"
+        android:background="@android:color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="@string/addressee"
+                    android:textColor="@color/text_color_black_333333"
+                    android:textSize="@dimen/text_size_13" />
+
+                <LinearLayout
+                    android:id="@+id/ll_addresseeContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="@drawable/default_linearlayout_divider"
+                    android:orientation="vertical"
+                    android:showDividers="middle">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/et_addressee_input"
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:background="@drawable/shape_background_addressee"
+                        android:completionThreshold="1"
+                        android:gravity="center_vertical"
+                        android:hint="@string/input_email_hint"
+                        android:imeOptions="actionSend"
+                        android:inputType="textEmailAddress"
+                        android:maxLength="30"
+                        android:maxLines="1"
+                        android:minWidth="200dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:textColor="@color/text_color_black_666666"
+                        android:textColorHint="@color/edit_text_hint_color_C0CADB"
+                        android:textSize="@dimen/text_size_13" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:background="@color/background_main" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:orientation="vertical"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:text="@string/previous_addressee"
+                    android:textColor="@color/text_color_blue_53ABD5"
+                    android:textSize="@dimen/text_size_13" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/background_main" />
+
+                <LinearLayout
+                    android:id="@+id/ll_previousContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:showDividers="middle" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/rl_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="10dp">
+
+        <LinearLayout
+            android:id="@+id/ll_shareType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/cb_email_link"
+                android:layout_width="77dp"
+                android:layout_height="30dp"
+                android:background="@drawable/checker_background_more_filter"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:text="@string/resume_normal"
+                android:textColor="@drawable/text_color_checker_account_resume_classfy_menu"
+                android:textSize="@dimen/text_size_11" />
+
+            <CheckBox
+                android:id="@+id/cb_email_attachment"
+                android:layout_width="77dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/checker_background_more_filter"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:text="@string/resume_source_text"
+                android:textColor="@drawable/text_color_checker_account_resume_classfy_menu"
+                android:textSize="@dimen/text_size_11" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_tips"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_shareType"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:text="@string/share_email_tips_a"
+            android:textColor="@color/text_color_grey_9E9E9E"
+            android:textSize="@dimen/text_size_9"
+            android:visibility="invisible" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_tips">
+
+            <Button
+                android:id="@+id/btn_send"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="90dp"
+                android:layout_height="34dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/login_login_btn_bg"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:text="@string/send"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_size_13" />
+
+            <EditText
+                android:id="@+id/et_live_msg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_toLeftOf="@id/btn_send"
+                android:background="@drawable/shape_background_email_share_live_msg"
+                android:drawableLeft="@drawable/icon_pen"
+                android:drawablePadding="5dp"
+                android:hint="@string/hint_live_msg"
+                android:maxLength="500"
+                android:maxLines="3"
+                android:minLines="2"
+                android:textColor="@color/text_color_black_666666"
+                android:textColorHint="@color/edit_text_hint_color_C0CADB"
+                android:textSize="@dimen/text_size_13" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

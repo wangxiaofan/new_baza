@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/fl_enable_update"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:background="@color/background_2053ABD5"
+        android:paddingLeft="@dimen/dp_10"
+        android:paddingRight="@dimen/dp_10"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="@string/enable_to_update_to_resume"
+            android:textColor="@color/text_color_blue_53ABD5"
+            android:textSize="@dimen/text_size_12" />
+
+        <TextView
+            android:id="@+id/tv_update_to_target"
+            android:layout_width="@dimen/dp_56"
+            android:layout_height="@dimen/dp_24"
+            android:layout_gravity="right|center_vertical"
+            android:background="@drawable/resume_request_share_btn_bg"
+            android:gravity="center"
+            android:text="@string/update"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_11" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_default_with_top_line"
+        android:minHeight="@dimen/dp_50"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/dp_5"
+        android:paddingBottom="@dimen/dp_5">
+
+        <TextView
+            android:id="@+id/tv_collection"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/icon_un_collection_empty_high_light"
+            android:drawablePadding="@dimen/dp_5"
+            android:gravity="center_horizontal|bottom"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="@string/collection"
+            android:textColor="@color/text_color_blue_0D315C"
+            android:textSize="@dimen/text_size_11" />
+
+        <TextView
+            android:id="@+id/tv_add_remark"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/icon_add_recorde"
+            android:drawablePadding="@dimen/dp_5"
+            android:gravity="center_horizontal|bottom"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="@string/add_record"
+            android:textColor="@color/text_color_blue_0D315C"
+            android:textSize="@dimen/text_size_11" />
+
+        <TextView
+            android:id="@+id/tv_add_recommend"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/icon_share_out"
+            android:drawablePadding="@dimen/dp_5"
+            android:gravity="center_horizontal|bottom"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="@string/add_recommend"
+            android:textColor="@color/text_color_blue_0D315C"
+            android:textSize="@dimen/text_size_11" />
+
+        <TextView
+            android:id="@+id/tv_add_label"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/icon_menu_label"
+            android:drawablePadding="@dimen/dp_5"
+            android:gravity="center_horizontal|bottom"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="@string/add_label"
+            android:textColor="@color/text_color_blue_0D315C"
+            android:textSize="@dimen/text_size_11" />
+
+
+    </LinearLayout>
+</LinearLayout>

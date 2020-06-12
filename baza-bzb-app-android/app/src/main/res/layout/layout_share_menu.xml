@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+        <com.baza.android.bzw.widget.NOScrollGridView
+            android:id="@+id/grid_menus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:listSelector="@android:color/transparent"
+            android:numColumns="4" />
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_default_with_top_line"
+            android:gravity="center"
+            android:padding="@dimen/dp_15"
+            android:text="@string/cancel"
+            android:textColor="@color/text_color_blue_0D315C"
+            android:textSize="@dimen/text_size_14" />
+
+    </LinearLayout>
+</RelativeLayout>
+

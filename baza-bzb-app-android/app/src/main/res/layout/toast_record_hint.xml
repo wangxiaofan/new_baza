@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="@dimen/voice_record_show_info_ui_wh"
+        android:layout_height="@dimen/voice_record_show_info_ui_wh"
+        android:background="@drawable/shape_background_record_hint"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_pic_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="110dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/icon_record_time_hint" />
+
+
+        <TextView
+            android:id="@+id/tv_text_hint"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_13" />
+    </LinearLayout>
+</FrameLayout>

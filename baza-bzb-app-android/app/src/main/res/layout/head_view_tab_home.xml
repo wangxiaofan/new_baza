@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.baza.android.bzw.widget.circlevp.CircleViewPager
+            android:id="@+id/vp_banner"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:enableAutoNext="true"
+            app:nextFrameDistanceSec="3"
+            android:background="@drawable/home_banner_default_img" />
+
+        <ImageView
+            android:id="@+id/iv_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:padding="@dimen/dp_15"
+            android:src="@drawable/tab_home_icon_plus_btn" />
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:id="@+id/view_top_tab_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/tab_home_banner_bottom_bg"
+        android:orientation="vertical">
+
+        <!--<android.support.constraint.ConstraintLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="horizontal">-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/tv_smart_group"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="@drawable/tab_home_list_exchange_btn_bg"-->
+        <!--android:text="@string/smart_group"-->
+        <!--android:textColor="@color/text_color_black_282828"-->
+        <!--android:textSize="@dimen/text_size_15"-->
+        <!--app:layout_constraintLeft_toLeftOf="parent"-->
+        <!--app:layout_constraintTop_toTopOf="parent" />-->
+
+
+        <!--<TextView-->
+        <!--android:id="@+id/tv_list_receive_entrance"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="@drawable/tab_home_list_receive_btn_bg"-->
+        <!--android:text="@string/list_receive"-->
+        <!--android:textColor="@color/text_color_black_282828"-->
+        <!--android:textSize="@dimen/text_size_15"-->
+        <!--app:layout_constraintLeft_toLeftOf="parent"-->
+        <!--app:layout_constraintRight_toRightOf="parent"-->
+        <!--app:layout_constraintTop_toTopOf="parent" />-->
+
+
+        <!--<TextView-->
+        <!--android:id="@+id/tv_list_match_entrance"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="@drawable/tab_home_list_match_btn_bg"-->
+        <!--android:text="@string/list_match"-->
+        <!--android:textColor="@color/text_color_black_282828"-->
+        <!--android:textSize="@dimen/text_size_15"-->
+        <!--app:layout_constraintRight_toRightOf="parent"-->
+        <!--app:layout_constraintTop_toTopOf="parent" />-->
+
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="@dimen/dp_5"-->
+        <!--android:layout_marginRight="@dimen/dp_10"-->
+        <!--android:background="@drawable/list_exchange_function_hint"-->
+        <!--android:paddingLeft="@dimen/dp_5"-->
+        <!--android:paddingRight="@dimen/dp_5"-->
+        <!--android:text="@string/black_technology"-->
+        <!--android:textColor="@android:color/white"-->
+        <!--android:textSize="@dimen/text_size_10"-->
+        <!--app:layout_constraintRight_toRightOf="@id/tv_smart_group"-->
+        <!--app:layout_constraintTop_toTopOf="parent" />-->
+        <!--</android.support.constraint.ConstraintLayout>-->
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_smart_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/tab_home_list_exchange_btn_bg"
+                android:text="@string/smart_group"
+                android:textColor="@color/text_color_black_282828"
+                android:textSize="@dimen/text_size_14"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="spread_inside" />
+
+
+            <!--<TextView-->
+                <!--android:id="@+id/tv_list_match_entrance"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:background="@drawable/tab_home_list_match_btn_bg"-->
+                <!--android:text="@string/list_match"-->
+                <!--android:textColor="@color/text_color_black_282828"-->
+                <!--android:textSize="@dimen/text_size_15"-->
+                <!--app:layout_constraintHorizontal_weight="1"-->
+                <!--app:layout_constraintLeft_toRightOf="@id/tv_smart_group"-->
+                <!--app:layout_constraintRight_toRightOf="parent"-->
+                <!--app:layout_constraintTop_toTopOf="parent"-->
+                <!--app:layout_constraintVertical_chainStyle="spread_inside" />-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_5"
+                android:layout_marginRight="@dimen/dp_10"
+                android:background="@drawable/list_exchange_function_hint"
+                android:paddingLeft="@dimen/dp_5"
+                android:paddingRight="@dimen/dp_5"
+                android:text="@string/black_technology"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_size_10"
+                app:layout_constraintRight_toRightOf="@id/tv_smart_group"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/view_friend_nearly"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/dp_15"
+            android:paddingRight="@dimen/dp_15"
+            android:paddingBottom="@dimen/dp_5">
+
+            <ImageView
+                android:id="@+id/iv_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_arrow_gray_next"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <FrameLayout
+                android:id="@+id/fl_avatar_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dp_10"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/iv_arrow"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dp_5"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="@string/friend_suggest_des"
+                android:textColor="@color/text_color_black_282828"
+                android:textSize="@dimen/text_size_11"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/fl_avatar_container"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/background_main" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:paddingLeft="@dimen/dp_15"
+        android:paddingTop="@dimen/dp_10"
+        android:paddingRight="@dimen/dp_15"
+        android:text="@string/candidate_update"
+        android:textColor="@color/text_color_grey_94A1A5"
+        android:textSize="@dimen/text_size_13"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <!---->
+    <!--<android.support.constraint.ConstraintLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="@android:color/white"-->
+    <!--android:paddingLeft="@dimen/dp_15"-->
+    <!--android:paddingTop="@dimen/dp_10"-->
+    <!--android:paddingRight="@dimen/dp_15">-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv_1_1"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="@string/candidate_update"-->
+    <!--android:textColor="@color/text_color_grey_94A1A5"-->
+    <!--android:textSize="@dimen/text_size_14"-->
+    <!--app:layout_constraintLeft_toLeftOf="parent"-->
+    <!--app:layout_constraintTop_toTopOf="parent" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv_hint_verify"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="@dimen/dp_5"-->
+    <!--android:text="@string/verify_to_use_more_function"-->
+    <!--android:textColor="@color/color_red_FF6564"-->
+    <!--android:textSize="@dimen/text_size_10"-->
+    <!--android:visibility="gone"-->
+    <!--app:layout_constraintLeft_toLeftOf="parent"-->
+    <!--app:layout_constraintRight_toRightOf="parent"-->
+    <!--app:layout_constraintTop_toBottomOf="@id/tv_1_1" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv_change_path"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:drawablePadding="@dimen/dp_5"-->
+    <!--android:gravity="center"-->
+    <!--android:text="@string/change_patch"-->
+    <!--android:textColor="@color/text_color_grey_94A1A5"-->
+    <!--android:textSize="@dimen/text_size_10"-->
+    <!--app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--app:layout_constraintRight_toRightOf="parent"-->
+    <!--app:layout_constraintTop_toTopOf="@id/tv_1_1" />-->
+    <!--</android.support.constraint.ConstraintLayout>-->
+
+
+</LinearLayout>

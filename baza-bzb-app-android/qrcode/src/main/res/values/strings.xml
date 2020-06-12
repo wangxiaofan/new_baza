@@ -1,0 +1,4 @@
+<resources>
+    <string name="scan_qrcode">扫一扫</string>
+    <string name="label_info">支持扫码快速登录电脑版八爪盒子</string>
+</resources>

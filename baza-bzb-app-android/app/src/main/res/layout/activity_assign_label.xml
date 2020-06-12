@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_bar_default_left_imageview" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--<com.baza.android.bzw.widget.LineBreakLayout-->
+            <!--android:id="@+id/lbl_assign_container"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:clickable="true"-->
+            <!--android:padding="10dp"-->
+            <!--app:horizontalDepart="10dp"-->
+            <!--app:verticalDepart="10dp" />-->
+
+            <!--<View-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="1dp"-->
+            <!--android:layout_marginLeft="10dp"-->
+            <!--android:layout_marginRight="10dp"-->
+            <!--android:background="@color/background_main" />-->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_15"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:text="@string/all_label"
+                android:textColor="@color/text_color_blue_0D315C"
+                android:textSize="@dimen/text_size_14" />
+
+            <com.baza.android.bzw.widget.LineBreakLayout
+                android:id="@+id/lbl_all_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/dp_15"
+                android:paddingRight="@dimen/dp_15"
+                app:horizontalDepart="@dimen/dp_10"
+                app:verticalDepart="@dimen/dp_10" />
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:padding="@dimen/dp_20">
+
+        <Button
+            android:id="@+id/btn_add"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="@dimen/dp_100"
+            android:layout_height="@dimen/default_button_height"
+            android:layout_marginRight="@dimen/dp_20"
+            android:background="@drawable/resume_update_card_update_btn_bg"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:text="@string/add"
+            android:textColor="@color/text_color_blue_53ABD5"
+            android:textSize="@dimen/text_size_14" />
+
+        <Button
+            android:id="@+id/btn_submit"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="@dimen/dp_100"
+            android:layout_height="@dimen/default_button_height"
+            android:background="@drawable/resume_request_share_btn_bg"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:text="@string/sure"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_14" />
+    </LinearLayout>
+</LinearLayout>

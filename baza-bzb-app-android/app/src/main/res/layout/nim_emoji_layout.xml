@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_default_with_top_line"
+    android:orientation="vertical"
+    android:visibility="visible">
+
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/scrPlugin"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_marginBottom="4dp"
+        android:layout_marginTop="4dp"
+        android:overScrollMode="never"
+        android:scrollbars="none" />
+
+    <LinearLayout
+        android:id="@+id/layout_scr_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:layout_marginBottom="4dp"
+        android:gravity="center"
+        android:orientation="horizontal" />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@color/text_color_grey_9E9E9E" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
+
+        <HorizontalScrollView
+            android:id="@+id/emoj_tab_view_container"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/white"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:id="@+id/emoj_tab_view"
+                android:layout_width="wrap_content"
+                android:layout_height="44dp"
+                android:orientation="horizontal" />
+        </HorizontalScrollView>
+    </LinearLayout>
+
+</LinearLayout>

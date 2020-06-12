@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_bar_default_left_imageview_right_textview" />
+
+    <com.baza.android.bzw.widget.LoadingView
+        android:id="@+id/loading_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/pull_to_refresh_listView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        android:listSelector="@android:color/transparent" />
+
+    <Button
+        android:id="@+id/btn_add"
+        android:layout_width="@dimen/dp_140"
+        android:layout_height="@dimen/default_button_height"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/dp_20"
+        android:background="@drawable/resume_request_share_btn_bg"
+        android:clickable="true"
+        android:onClick="onClick"
+        android:text="@string/email_add_text"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_size_14" />
+</LinearLayout>

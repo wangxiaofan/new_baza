@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/fl_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/name_list_search_entrance_bg"
+        android:clickable="true"
+        android:onClick="onClick"
+        android:paddingBottom="@dimen/dp_10"
+        android:paddingTop="@dimen/dp_10">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/default_edit_text_height"
+            android:layout_gravity="center"
+            android:drawableLeft="@drawable/icon_search_logo"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:text="@string/search_local_friend"
+            android:textColor="@color/text_color_grey_94A1A5"
+            android:textSize="@dimen/text_size_12" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_new_friend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_background_click_default_with_bottom_line">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:drawableLeft="@drawable/friend_ic_request"
+            android:drawablePadding="@dimen/dp_10"
+            android:drawableRight="@drawable/icon_arrow_gray_next"
+            android:gravity="center_vertical"
+            android:padding="@dimen/dp_13"
+            android:text="@string/new_friend"
+            android:textColor="@color/text_color_blue_0D315C"
+            android:textSize="@dimen/text_size_13" />
+
+        <View
+            android:id="@+id/view_new_hint"
+            android:layout_width="@dimen/dp_8"
+            android:layout_height="@dimen/dp_8"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="@dimen/dp_30"
+            android:background="@drawable/small_red_doll"
+            android:visibility="gone" />
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_bar_resume_search" />
+
+    <com.baza.android.bzw.widget.LoadingView
+        android:id="@+id/loading_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/search_filter_ui"
+        layout="@layout/layout_filter_search" />
+
+    <!--<View style="@style/line_horizontal_D3D3D3" />-->
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="-1dp">
+
+        <com.handmark.pulltorefresh.library.PullToRefreshListView
+            android:id="@+id/pull_to_refresh_listView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="40dp"
+            android:divider="@null"
+            android:dividerHeight="0dp"
+            android:listSelector="@android:color/transparent" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_5"
+            android:background="@drawable/name_list_advance_filter_shadow" />
+
+        <include
+            android:id="@+id/view_no_result"
+            layout="@layout/empty_view_candidate_no_search_result"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="40dp"
+            android:visibility="gone" />
+
+        <com.baza.android.bzw.widget.ScrollShowImageView
+            android:id="@+id/scroll_show_image_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|bottom"
+            android:layout_marginBottom="60dp"
+            android:backgroundTint="@color/text_color_blue_53ABD5"
+            android:clickable="true"
+            android:onClick="onClick"
+            android:src="@drawable/icon_to_top"
+            app:borderWidth="0dp"
+            app:readyShowCount="15"
+            app:rightDistance="20dp"
+            app:rippleColor="@color/color_355986" />
+
+        <Button
+            android:id="@+id/btn_update"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_gravity="bottom"
+            android:background="@drawable/resume_detail_request_btn_bg"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_13" />
+
+    </FrameLayout>
+</LinearLayout>

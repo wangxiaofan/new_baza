@@ -1,0 +1,298 @@
+//import java.text.SimpleDateFormat
+
+//gradlew assemblemk_testDebug
+apply plugin: 'com.android.application'
+
+//apply plugin: 'com.growingio.android'
+//apply plugin: 'com.baza.track'
+
+//apply plugin: 'com.getkeepsafe.dexcount'
+
+//def TimeStamp = releaseTime();
+//
+//def static releaseTime() {
+//    return new SimpleDateFormat("yyyy-MM-dd_HH").format(new Date()).toUpperCase();
+//}
+//configurations {
+//    all*.exclude group: 'com.android.support', module: 'appcompat'
+//}
+
+android {
+    compileSdkVersion project.global_compileSdkVersion as int
+    buildToolsVersion project.global_buildToolsVersion
+
+    defaultConfig {
+        applicationId "com.bznet.android.rcbox"
+        minSdkVersion project.global_minSdkVersion as int
+        targetSdkVersion project.global_targetSdkVersion as int
+        versionName "5.2.2"
+        versionCode 96
+//        resValue("string", "growingio_project_id", "be746d9da3162e89")
+//        resValue("string", "growingio_url_scheme", "0f256a10f029df26")
+        //打包时间点
+//        buildConfigField("String", "TIME_STAMP", "\"$TimeStamp\"")
+        //请求头签名信息是否加密
+        buildConfigField("boolean", "IS_SIGN_AUTH_HEADER", "true")
+        manifestPlaceholders = [UMENG_CHANNEL_VALUE: "test"]
+        flavorDimensions "26"
+        multiDexEnabled true
+        ndk {
+            //设置支持的SO库架构
+            abiFilters "armeabi", "armeabi-v7a", "x86"
+        }
+    }
+
+    //签名
+    signingConfigs {
+        myConfig {
+            storeFile file("../app/rcbox_keystore.jks")
+            storePassword "rcb123456"
+            keyAlias "rcbox"
+            keyPassword "rcb123456"
+        }
+    }
+    buildTypes {
+        debug {
+            buildConfigField("int", "LOG_LEVEL", "1")
+            buildConfigField("boolean", "IS_PROCESS_CRASH_MSG", "false")
+            buildConfigField("boolean", "IS_DEBUG_BUILD", "true")
+
+            //新增注释
+//            buildConfigField("String", "NIM_KEY", "\"8230387d40d4fa1bcbf342b480db8f78\"")
+//            buildConfigField("String", "HOST_H5", "\"http://www.dev.bazhua.me\"")
+//            buildConfigField("String", "HOST", "\"http://api.dev.8aza.com\"")
+
+            //新增
+            buildConfigField("String", "NIM_KEY", "\"c73257ca30fc75762b83168e63972b3b\"")
+            buildConfigField("String", "HOST_H5", "\"http://www.stg.bazhua.me\"")
+            buildConfigField("String", "HOST", "\"http://api.stg.ibole.net\"")
+
+
+            //开发环境临时调试的域名
+//        buildConfigField("String", "HOST", "\"http://192.168.1.25:8090\"")
+//            buildConfigField("String", "HOST", "\"http://192.168.89.20:8088\"")
+
+            shrinkResources false
+            debuggable true
+            signingConfig signingConfigs.myConfig
+        }
+        xxx {
+            buildConfigField("int", "LOG_LEVEL", "1")
+            buildConfigField("boolean", "IS_PROCESS_CRASH_MSG", "true")
+            buildConfigField("boolean", "IS_DEBUG_BUILD", "true")
+            buildConfigField("String", "NIM_KEY", "\"f049d71f0a43a3c99ba96f84ee0d7b1d\"")
+            buildConfigField("String", "HOST_H5", "\"http://www.xxx.bazhua.me\"")
+            buildConfigField("String", "HOST", "\"http://api.xxx.ibole.net\"")
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            shrinkResources false
+            debuggable true
+            signingConfig signingConfigs.myConfig
+        }
+        rc {
+            buildConfigField("int", "LOG_LEVEL", "1")
+            buildConfigField("boolean", "IS_DEBUG_BUILD", "true")
+            buildConfigField("boolean", "IS_PROCESS_CRASH_MSG", "false")
+            buildConfigField("String", "NIM_KEY", "\"538245357e99db97e9d3556cef6c22e0\"")
+            buildConfigField("String", "HOST_H5", "\"http://www.rc.bazhua.me\"")
+            buildConfigField("String", "HOST", "\"http://api.rc.8aza.com\"")
+//            buildConfigField("String", "HOST", "\"http://192.168.1.203:8080\"")
+//            buildConfigField("String", "HOST", "\"http://192.168.1.25:8090\"")
+//            buildConfigField("String", "HOST", "\"http://192.168.89.20:8088\"")
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            shrinkResources false
+            debuggable true
+            signingConfig signingConfigs.myConfig
+        }
+        stg {
+            buildConfigField("int", "LOG_LEVEL", "1")
+            buildConfigField("boolean", "IS_PROCESS_CRASH_MSG", "true")
+            buildConfigField("boolean", "IS_DEBUG_BUILD", "true")
+            buildConfigField("String", "NIM_KEY", "\"c73257ca30fc75762b83168e63972b3b\"")
+            buildConfigField("String", "HOST_H5", "\"http://www.stg.bazhua.me\"")
+            buildConfigField("String", "HOST", "\"http://api.stg.ibole.net\"")
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            shrinkResources false
+            debuggable true
+            signingConfig signingConfigs.myConfig
+        }
+        release {
+//            编译生产环境请打开
+//            apply plugin: 'com.baza.track'
+            buildConfigField("int", "LOG_LEVEL", "0")
+            buildConfigField("boolean", "IS_DEBUG_BUILD", "false")
+            buildConfigField("boolean", "IS_PROCESS_CRASH_MSG", "true")
+            buildConfigField("String", "NIM_KEY", "\"f049d71f0a43a3c99ba96f84ee0d7b1d\"")
+            buildConfigField("String", "HOST_H5", "\"https://www.bazhua.me\"")
+            buildConfigField("String", "HOST", "\"https://api.ibole.net\"")
+            shrinkResources true
+            signingConfig signingConfigs.myConfig
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            //输出包名称修改
+            applicationVariants.all { variant ->
+                variant.outputs.all { output ->
+                    // 输出apk名称
+                    outputFileName = "BZW-Android-${variant.productFlavors.name}-${variant.buildType.name}.apk"
+                }
+            }
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+    dexOptions {
+//        incremental true
+        preDexLibraries false
+        jumboMode true
+//        javaMaxHeapSize "3g"
+    }
+    packagingOptions {
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+//        exclude 'lib/mips64/NAME_OF_THE_LIB.so'
+//        exclude 'lib/mips/NAME_OF_THE_LIB.so'
+    }
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+
+        jcenter()
+    }
+    sourceSets {
+        main {
+            java.srcDirs = ['src/main/java', 'src/main/java-gen']
+            jniLibs.srcDirs = ['src/main/jniLibs', 'libs']
+        }
+    }
+
+//    渠道
+    productFlavors {
+        mk_test {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "test"]
+        }
+        mk_baidu {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "mk_baidu"]
+        }
+        mk_anzhi {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "mk_anzhi"]
+        }
+        mk_360 {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "mk_360"]
+        }
+        mk_xiaomi {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "mk_xiaomi"]
+        }
+        mk_yingyongbao {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "mk_yingyongbao"]
+        }
+        mk_huawei {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "mk_huawei"]
+        }
+        mk_sogo {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "mk_sogo"]
+        }
+        mk_oppo {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "mk_oppo"]
+        }
+        mk_meizu {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "mk_meizu"]
+        }
+        mk_lenovo {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "mk_lenovo"]
+        }
+        mk_smartisan {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "mk_smartisan"]
+        }
+        mk_LBDAD {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "LBDAD"]
+        }
+        mk_LBDLoginAD {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "LBDLoginAD"]
+        }
+        mk_OfficialWebAD {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "OfficialWebAD"]
+        }
+        mk_OfficialWeb {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "OfficialWeb"]
+        }
+        mk_CSDNJOBAD {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "CSDNJOBAD"]
+        }
+        mk_YLAD {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "YLAD"]
+        }
+        mk_HiredeAD {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "HiredeAD"]
+        }
+        mk_BDXXL {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "BDXXL"]
+        }
+        mk_WeChatGZH {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "WeChatGZH"]
+        }
+        mk_vivo {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "vivo"]
+        }
+        mk_YYBKA {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "YYBKA"]
+        }
+        mk_GDT {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "GDT"]
+        }
+        mk_BDAD {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "BDAD"]
+        }
+    }
+
+
+    dependencies {
+        implementation fileTree(dir: 'libs', include: ['*.jar'])
+        //GIF显示
+        implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.3'
+        implementation 'com.jakewharton:butterknife:10.1.0'
+        annotationProcessor 'com.jakewharton:butterknife-compiler:10.1.0'
+        implementation project(':commonlibs')
+        implementation project(':pickerview')
+        implementation project(':im')
+        implementation project(':pulltorefresh')
+        implementation project(':jpush')
+        implementation project(':filePicker')
+        implementation project(':location')
+        implementation project(':share')
+        implementation project(':qrcode')
+        implementation project(':rangeseekbar')
+        implementation project(':trackagentlibrary')
+        implementation project(':multiprocesssimpleconnect')
+        implementation project(':tuikit')//腾讯IM
+        //友盟
+//        implementation 'com.umeng.analytics:analytics:latest.integration'
+        implementation 'com.makeramen:roundedimageview:2.3.0'
+        implementation global_constraint_layout
+        implementation(name: 'NoCaptchaSDK-external-release-5.4.20', ext: 'aar')
+        implementation(name: 'SecurityBodySDK-external-release-5.4.40', ext: 'aar')
+        implementation(name: 'SecurityGuardSDK-external-release-5.4.56', ext: 'aar')
+        implementation(name: 'verificationsdklib-1.3.2.3417747-3ND-SMS-NC', ext: 'aar')
+        implementation 'com.android.support:multidex:1.0.3'
+        //FlycoTabLayout
+        implementation 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar'
+        //Gson
+        implementation 'com.google.code.gson:gson:2.8.0'
+
+        //Retrofit
+        implementation 'com.squareup.retrofit2:retrofit:2.6.0'
+        implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+        implementation 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
+
+    }
+    useLibrary 'org.apache.http.legacy'
+}
+

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_bar_default_left_imageview" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@android:color/white"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <TextView
+            android:id="@+id/tv_mobile_title"
+            android:layout_width="68dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="@string/mobile"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_size_15" />
+
+        <Button
+            android:id="@+id/btn_get_sms_code"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@null"
+            android:clickable="true"
+            android:drawableLeft="@drawable/line_a"
+            android:drawablePadding="5dp"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:text="@string/get_sms_code"
+            android:textColor="@color/text_color_blue_53ABD5"
+            android:textSize="@dimen/text_size_15" />
+
+        <com.baza.android.bzw.widget.ClearEditText
+            android:id="@+id/et_username"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/btn_get_sms_code"
+            android:layout_toRightOf="@id/tv_mobile_title"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:hint="@string/input_cellphone"
+            android:inputType="number"
+            android:maxLength="11"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColor="@color/text_color_black_333333"
+            android:textColorHint="@color/edit_text_hint_color_C0CADB"
+            android:textCursorDrawable="@null"
+            android:textSize="@dimen/text_size_15" />
+    </RelativeLayout>
+
+    <View style="@style/line_horizontal_D3D3D3" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@android:color/white"
+        android:orientation="horizontal"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <TextView
+            android:layout_width="68dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="@string/sms_code"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_size_15" />
+
+        <com.baza.android.bzw.widget.ClearEditText
+            android:id="@+id/et_sms_code"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:hint="@string/input_sms_check_code"
+            android:inputType="number"
+            android:maxLength="6"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColor="@color/text_color_black_333333"
+            android:textColorHint="@color/edit_text_hint_color_C0CADB"
+            android:textCursorDrawable="@null"
+            android:textSize="@dimen/text_size_15" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_do_check"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/login_login_btn_bg"
+        android:clickable="true"
+        android:onClick="onClick"
+        android:text="@string/submit_to_check"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_size_17" />
+</LinearLayout>

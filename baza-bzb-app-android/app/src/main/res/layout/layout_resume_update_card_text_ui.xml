@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingBottom="@dimen/dp_15"
+        android:paddingLeft="@dimen/dp_10"
+        android:text="@string/resume_source_text"
+        android:textColor="@color/text_color_blue_0D315C"
+        android:textSize="@dimen/text_size_13" />
+
+    <View style="@style/line_horizontal_D3D3D3" />
+
+    <TextView
+        android:id="@+id/tv_online_resume_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/icon_candidate_history"
+        android:drawablePadding="@dimen/dp_5"
+        android:drawableRight="@drawable/icon_arrow_gray_next"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:paddingBottom="@dimen/dp_10"
+        android:paddingLeft="@dimen/dp_20"
+        android:paddingRight="@dimen/dp_20"
+        android:paddingTop="@dimen/dp_10"
+        android:textColor="@color/text_color_blue_0D315C"
+        android:textSize="@dimen/text_size_11" />
+</LinearLayout>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="入职时间:"
+            android:textColor="#4E5968"
+            android:textSize="13sp" />
+
+
+        <LinearLayout
+            android:id="@+id/ll_date"
+            android:layout_width="@dimen/dp_90"
+            android:layout_height="@dimen/dp_21"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:background="@drawable/right_center_area_bg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/dp_10">
+
+            <ImageView
+                android:layout_width="@dimen/dp_12"
+                android:layout_height="@dimen/dp_11"
+                android:background="@drawable/icon_xuanzeriqi" />
+
+            <TextView
+                android:id="@+id/tv_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_5"
+                android:text="选择日期"
+                android:textColor="#A4A4A4"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="保&#8194;证&#8194;期:"
+            android:textColor="#4E5968"
+            android:textSize="@dimen/dp_10" />
+
+        <CheckBox
+            android:id="@+id/cb_one"
+            style="@style/cb_refuse"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:layout_marginTop="0dp"
+            android:paddingLeft="@dimen/dp_4"
+            android:text="无" />
+
+        <CheckBox
+            android:id="@+id/cb_two"
+            style="@style/cb_refuse"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:layout_marginTop="0dp"
+            android:checked="true"
+            android:paddingLeft="@dimen/dp_4"
+            android:text="三个月" />
+
+        <CheckBox
+            android:id="@+id/cb_three"
+            style="@style/cb_refuse"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:layout_marginTop="0dp"
+            android:paddingLeft="@dimen/dp_4"
+            android:text="六个月" />
+    </LinearLayout>
+</LinearLayout>

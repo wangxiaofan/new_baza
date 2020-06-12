@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/view_title_bar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_bar_height">
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="@dimen/title_bar_height"
+            android:layout_height="@dimen/title_bar_height"
+            android:layout_gravity="right"
+            android:clickable="true"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:text="@string/cancel"
+            android:textColor="@color/text_color_blue_0D315C"
+            android:textSize="@dimen/text_size_13" />
+
+        <com.baza.android.bzw.widget.ClearEditText
+            android:id="@+id/et_keyword"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/default_edit_text_height"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:layout_marginRight="@dimen/title_bar_height"
+            android:background="@drawable/round_conner_shape_gray"
+            android:drawableLeft="@drawable/icon_search_logo"
+            android:drawablePadding="@dimen/dp_10"
+            android:gravity="center_vertical"
+            android:hint="@string/hint_search_friend"
+            android:imeOptions="actionSearch"
+            android:maxLength="30"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingRight="@dimen/dp_10"
+            android:singleLine="true"
+            android:textColor="@color/text_color_blue_0D315C"
+            android:textColorHint="@color/text_color_grey_94A1A5"
+            android:textSize="@dimen/text_size_11" />
+    </FrameLayout>
+
+</FrameLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <external-path
+        name="files_root"
+        path="Android/data/com.bznet.android.rcbox/" />
+    <external-path
+        name="external_files"
+        path="." />
+    <external-files-path
+        name="external-files-path"
+        path="." />
+    <!--/data/data/com.bznet.android.rcbox/files/file/download/-->
+</paths>

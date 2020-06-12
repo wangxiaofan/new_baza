@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_bar_edit_search_condition" />
+
+    <ListView
+        android:id="@+id/lv_history"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:dividerHeight="0.5dp"
+        android:listSelector="@android:color/transparent" />
+    <!--<FrameLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent">-->
+
+    <!--<ListView-->
+    <!--android:id="@+id/lv_history"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:divider="@color/background_main"-->
+    <!--android:dividerHeight="0.5dp"-->
+    <!--android:listSelector="@android:color/transparent" />-->
+
+    <!--<ListView-->
+    <!--android:id="@+id/lv_keyword"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:divider="@color/background_main"-->
+    <!--android:dividerHeight="0.5dp"-->
+    <!--android:listSelector="@android:color/transparent"-->
+    <!--android:visibility="gone" />-->
+    <!--</FrameLayout>-->
+</LinearLayout>

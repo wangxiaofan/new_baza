@@ -1,0 +1,543 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.bznet.android.rcbox">
+
+    <uses-sdk tools:overrideLibrary="tv.danmaku.ijk.media.player_x86_64, tv.danmaku.ijk.media.player_arm64" />
+
+    <!-- 加入应用需要的权限 -->
+    <!-- 网络相关 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 读写文件 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 多媒体 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+
+    <!-- 访问网络状态-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 控制呼吸灯，振动器等，用于新消息提醒 -->
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <!--<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />-->
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="false"
+        android:resizeable="true"
+        android:smallScreens="true" />
+    <application
+        android:name="com.baza.android.bzw.application.BZWApplication"
+        android:allowBackup="false"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:replace="android:allowBackup,android:name">
+
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.1" />
+        <!--友盟-->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="57fdd050e0f55acb26001dfe" />
+        <!--友盟渠道号-->
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="${UMENG_CHANNEL_VALUE}" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.bznet.android.rcbox.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            tools:replace="android:authorities">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepath" />
+        </provider>
+
+        <activity
+            android:name="com.baza.android.bzw.businesscontroller.message.IMChatActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <data
+                    android:host="baza"
+                    android:path="/IMChatActivity"
+                    android:scheme="scheme" />
+                <!--下面这几行也必须得设置-->
+                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.baza.android.bzw.businesscontroller.message.IMSearchActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name="com.baza.android.bzw.businesscontroller.message.IMAddGroupChatSearchActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name="com.baza.android.bzw.businesscontroller.message.IMSearchDetailsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name="com.baza.android.bzw.businesscontroller.message.IMAddGroupChatChooseActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name="com.baza.android.bzw.businesscontroller.message.IMAddGroupChatActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <!--协议部分，-->
+                <data
+                    android:host="baza"
+                    android:path="/IMAddGroupChatActivity"
+                    android:scheme="scheme" />
+                <!--下面这几行也必须得设置-->
+                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.baza.android.bzw.businesscontroller.publish.LauncherActivity"
+            android:resizeableActivity="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/LauncherAppTheme">
+            <meta-data
+                android:name="android.notch_support"
+                android:value="true" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <data android:scheme="growing.0f256a10f029df26" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+        </activity>
+        <!--阿里验证码-->
+        <activity
+            android:name="com.alibaba.verificationsdk.ui.VerifyActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name="com.baza.android.bzw.businesscontroller.publish.PickPhotosActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.baza.android.bzw.businesscontroller.login.LoginActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.baza.android.bzw.businesscontroller.publish.AdvertisementActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.baza.android.bzw.businesscontroller.publish.FirstOpenAppGuideActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.baza.android.bzw.businesscontroller.home.HomeActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <activity
+            android:name="com.baza.android.bzw.businesscontroller.search.ResumeSearchActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.baza.android.bzw.businesscontroller.search.EditSearchConfigActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoAnimationAppTheme"
+            android:windowSoftInputMode="adjustResize|stateVisible" />
+        <activity
+            android:name="com.baza.android.bzw.businesscontroller.resume.detail.ResumeDetailActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="social.core.ShareToQQActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|navigation"
+            android:theme="@style/ShareTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <!--QQ开放平台 start-->
+        <!--<activity-->
+        <!--android:name="com.tencent.tauth.AuthActivity"-->
+        <!--android:launchMode="singleTask"-->
+        <!--android:noHistory="true">-->
+        <!--<intent-filter>-->
+        <!--<action android:name="android.intent.action.VIEW" />-->
+
+        <!--<category android:name="android.intent.category.DEFAULT" />-->
+        <!--<category android:name="android.intent.category.BROWSABLE" />-->
+
+        <!--<data android:scheme="tencent1105731521" />-->
+        <!--</intent-filter>-->
+        <!--</activity>-->
+        <!--<activity-->
+        <!--android:name="com.tencent.connect.common.AssistActivity"-->
+        <!--android:configChanges="orientation|keyboardHidden|screenSize"-->
+        <!--android:theme="@android:style/Theme.Translucent.NoTitleBar" />-->
+        <!--QQ开放平台 end-->
+        <!--微信开放平台 start-->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|navigation"
+            android:exported="true"
+            android:launchMode="singleInstance"
+            android:theme="@style/ShareTheme" />
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|navigation"
+            android:exported="true"
+            android:launchMode="singleInstance"
+            android:theme="@style/ShareTheme" />
+        <!--微信开放平台 end-->
+        <activity
+            android:name="com.baza.android.bzw.businesscontroller.label.LabelLibraryActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.baza.android.bzw.businesscontroller.label.AssignLabelActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.baza.android.bzw.businesscontroller.account.CollectionActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.baza.android.bzw.businesscontroller.publish.CropAvatarActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.baza.android.bzw.businesscontroller.publish.EditValueActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.baza.android.bzw.businesscontroller.account.ImportPlatformListActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <!--        <activity-->
+        <!--            android:name="com.baza.android.bzw.businesscontroller.account.EmailSyncedListActivity"-->
+        <!--            android:screenOrientation="portrait"-->
+        <!--            android:windowSoftInputMode="adjustResize|stateHidden" />-->
+        <!--        <activity-->
+        <!--            android:name="com.baza.android.bzw.businesscontroller.account.AddEmailSyncAccountActivity"-->
+        <!--            android:screenOrientation="portrait"-->
+        <!--            android:windowSoftInputMode="adjustResize|stateHidden" />-->
+        <activity
+            android:name="com.baza.android.bzw.businesscontroller.email.BindEmailActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.baza.android.bzw.businesscontroller.email.EmailShareActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.baza.android.bzw.businesscontroller.account.AccountExperienceActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.baza.android.bzw.businesscontroller.resume.create.CreateResumeActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.baza.android.bzw.businesscontroller.message.ChatActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.baza.android.bzw.businesscontroller.publish.ForwardingActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/ShareTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden">
+            <intent-filter tools:ignore="AppLinkUrlError">
+                <action android:name="android.intent.action.SEND" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="application/pdf" />
+                <data android:mimeType="application/msword" />
+                <data android:mimeType="application/rtf" />
+                <data android:mimeType="text/html" />
+                <data android:mimeType="text/plain" />
+                <data android:mimeType="application/vnd.ms-works" />
+                <data android:mimeType="application/vnd.openxmlformats-officedocument.wordprocessingml.document" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.baza.android.bzw.businesscontroller.resume.mine.SeekActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.baza.android.bzw.businesscontroller.message.SystemMessageActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.baza.android.bzw.businesscontroller.publish.ResumeImportActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.baza.android.bzw.businesscontroller.resume.detail.ResumeTextActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.baza.android.bzw.businesscontroller.publish.CitySelectedActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.baza.android.bzw.businesscontroller.email.SendEmailActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.baza.android.bzw.businesscontroller.email.SendEmailSuccessActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.baza.android.bzw.businesscontroller.account.UserSetActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.baza.android.bzw.businesscontroller.login.BindMobileActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.baza.android.bzw.businesscontroller.find.updateengine.ResumeUpdateQAActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <!--<activity-->
+        <!--android:name="com.baza.android.bzw.businesscontroller.find.updateengine.ResumeUpdateContentActivity"-->
+        <!--android:screenOrientation="portrait"-->
+        <!--android:windowSoftInputMode="adjustResize|stateHidden" />-->
+        <activity
+            android:name="com.baza.android.bzw.businesscontroller.find.updateengine.UpdateLogActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.baza.android.bzw.businesscontroller.find.updateengine.ResumeUpdatedRecordsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.baza.android.bzw.businesscontroller.friend.FriendListActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.baza.android.bzw.businesscontroller.friend.SearchFriendActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateVisible" />
+        <activity
+            android:name="com.baza.android.bzw.businesscontroller.friend.FriendRequestActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.baza.android.bzw.businesscontroller.friend.FriendHomeActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.baza.android.bzw.businesscontroller.friend.DynamicActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <activity
+            android:name="com.baza.android.bzw.businesscontroller.friend.NearlyPersonActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.baza.android.bzw.businesscontroller.find.updateengine.ResumeEnableUpdateListActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.baza.android.bzw.businesscontroller.find.updateengine.ResumeUpdateCardActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BottomAnimationAppTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.baza.android.bzw.businesscontroller.publish.QRCodeActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.baza.android.bzw.businesscontroller.account.ChangeMobileActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <activity
+            android:name="com.baza.android.bzw.businesscontroller.friend.FriendSelectedActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.baza.android.bzw.businesscontroller.account.FeedBackActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <activity
+            android:name="com.baza.android.bzw.businesscontroller.browser.RemoteBrowserActivity"
+            android:process=":browser"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.baza.android.bzw.businesscontroller.find.updateengine.EnableUpdateResumeSearchActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="com.baza.android.bzw.businesscontroller.publish.LargeImageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/LargeeImagTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <!--<activity-->
+        <!--android:name="com.baza.android.bzw.businesscontroller.find.namelist.ListMatchActivity"-->
+        <!--android:screenOrientation="portrait"-->
+        <!--android:windowSoftInputMode="adjustPan|stateHidden" />-->
+        <!--<activity-->
+        <!--android:name="com.baza.android.bzw.businesscontroller.find.namelist.NameListMatchResultActivity"-->
+        <!--android:screenOrientation="portrait"-->
+        <!--android:windowSoftInputMode="adjustPan|stateHidden" />-->
+        <activity
+            android:name="com.baza.android.bzw.businesscontroller.resume.jobfind.JobHunterPredictionActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="com.baza.android.bzw.businesscontroller.account.ResumeClassifyActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="com.baza.android.bzw.businesscontroller.resume.smartgroup.SmartGroupHomeActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="com.baza.android.bzw.businesscontroller.resume.smartgroup.GroupDetailActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="com.baza.android.bzw.businesscontroller.account.RightCenterActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="com.baza.android.bzw.businesscontroller.account.BenefitDetailActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.baza.android.bzw.businesscontroller.resume.smartgroup.SmartGroupIndexActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.baza.android.bzw.businesscontroller.account.TaskCardActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.baza.android.bzw.businesscontroller.account.InvitedActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.baza.android.bzw.businesscontroller.resume.detail.AddTextRemarkActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.baza.android.bzw.businesscontroller.account.viewinterface.UserVerifyGuideActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.baza.android.bzw.businesscontroller.resume.recommend.RecommendActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <!--我的人才库-->
+        <activity
+            android:name="com.baza.android.bzw.businesscontroller.resume.tab.MineResumeActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <!--企业人才库-->
+        <activity
+            android:name="com.baza.android.bzw.businesscontroller.company.CompanyTalentActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <!--企业人才库简历-->
+        <!--floating-->
+        <activity
+            android:name="com.baza.android.bzw.businesscontroller.floating.FloatingActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden">
+            <intent-filter>
+                <data
+                    android:host="baza"
+                    android:path="/FloatingActivity"
+                    android:scheme="scheme" />
+                <!--下面这几行也必须得设置-->
+                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+        </activity>
+        <!--tracking-->
+        <activity
+            android:name="com.baza.android.bzw.businesscontroller.tracking.TrackingActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <!--trackingSearch-->
+        <activity
+            android:name="com.baza.android.bzw.businesscontroller.tracking.TrackingSearchActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <!--企业人才库详情-->
+        <activity
+            android:name="com.baza.android.bzw.businesscontroller.company.CompanyDetailActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <!--企业人才库搜索-->
+        <activity
+            android:name="com.baza.android.bzw.businesscontroller.company.CompanySearchActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <!--floatinglist详情-->
+        <activity
+            android:name="com.baza.android.bzw.businesscontroller.floating.FloatingDetailActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden">
+            <intent-filter>
+                <data
+                    android:host="baza"
+                    android:path="/FloatingDetailActivity"
+                    android:scheme="scheme" />
+                <!--下面这几行也必须得设置-->
+                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

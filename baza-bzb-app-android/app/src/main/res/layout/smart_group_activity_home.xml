@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_bar_default_left_imageview_right_textview" />
+
+    <com.baza.android.bzw.widget.LoadingView
+        android:id="@+id/loading_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/tv_do_search"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/default_edit_text_height"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:layout_marginRight="@dimen/dp_15"
+        android:background="@drawable/round_conner_shape_gray"
+        android:drawableLeft="@drawable/icon_search_logo"
+        android:drawablePadding="@dimen/dp_10"
+        android:ellipsize="end"
+        android:onClick="onClick"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:hint="@string/smart_group_search_default_hint"
+        android:maxLines="1"
+        android:paddingLeft="@dimen/dp_10"
+        android:paddingRight="@dimen/dp_10"
+        android:textColor="@color/text_color_blue_0D315C"
+        android:textColorHint="@color/text_color_grey_94A1A5"
+        android:textSize="@dimen/text_size_11"
+        android:visibility="gone" />
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/pull_to_refresh_listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        android:listSelector="@android:color/transparent" />
+</LinearLayout>

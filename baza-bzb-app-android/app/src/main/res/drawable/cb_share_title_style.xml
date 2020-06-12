@@ -1,0 +1,11 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item
+        android:drawable="@drawable/btn_yigouxuankuang"
+        android:state_checked="true"/>
+    <item
+        android:drawable="@drawable/btn_weigouxuankuang"
+        android:state_checked="false"/>
+    <item
+        android:drawable="@drawable/btn_weigouxuankuang"/>
+
+</selector>

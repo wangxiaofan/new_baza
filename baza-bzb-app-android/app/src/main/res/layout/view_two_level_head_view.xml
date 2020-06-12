@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.baza.android.bzw.widget.CircleImageView
+        android:id="@+id/civ_avatar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:civ_border_color="@android:color/white" />
+
+    <com.baza.android.bzw.widget.RoundTextView
+        android:id="@+id/tv_avatar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:textColor="@color/text_color_blue_53ABD5"
+        android:textSize="@dimen/text_size_14"
+        app:rbColor="@android:color/white"
+        app:rb_borderColor="@color/text_color_blue_53ABD5"
+        app:rb_borderWidth="1dp" />
+</FrameLayout>

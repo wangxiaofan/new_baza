@@ -1,0 +1,5 @@
+<resources>
+
+    <dimen name="text_size_pull_text">15dp</dimen>
+    <dimen name="header_footer_top_bottom_padding">15dp</dimen>
+</resources>

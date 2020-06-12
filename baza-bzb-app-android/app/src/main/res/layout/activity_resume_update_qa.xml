@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_bar_default_left_imageview" />
+
+    <!--<TextView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="50dp"-->
+    <!--android:layout_marginTop="10dp"-->
+    <!--android:background="@android:color/white"-->
+    <!--android:gravity="center_vertical"-->
+    <!--android:padding="15dp"-->
+    <!--android:text="@string/title_qa"-->
+    <!--android:textColor="@color/text_color_black_333333"-->
+    <!--android:textSize="@dimen/text_size_14" />-->
+
+    <!--<ScrollView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_marginTop="1dp">-->
+
+    <!--<LinearLayout-->
+    <!--android:id="@+id/ll_qa_container"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="@android:color/white"-->
+    <!--android:orientation="vertical"-->
+    <!--android:paddingLeft="35dp"-->
+    <!--android:paddingRight="35dp">-->
+
+    <!--<TextView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginBottom="10dp"-->
+    <!--android:layout_marginTop="20dp"-->
+    <!--android:text="@string/candidate_update_q_1"-->
+    <!--android:textColor="@color/text_color_orange_F98F33"-->
+    <!--android:textSize="@dimen/text_size_14" />-->
+
+    <!--<TextView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginBottom="20dp"-->
+    <!--android:text="@string/candidate_update_a_1"-->
+    <!--android:textColor="@color/text_color_black_666666"-->
+    <!--android:textSize="@dimen/text_size_14" />-->
+
+    <!--<View style="@style/line_horizontal_D3D3D3" />-->
+
+    <!--<TextView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginBottom="10dp"-->
+    <!--android:layout_marginTop="20dp"-->
+    <!--android:text="@string/candidate_update_q_2"-->
+    <!--android:textColor="@color/text_color_orange_F98F33"-->
+    <!--android:textSize="@dimen/text_size_14" />-->
+
+    <!--<TextView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginBottom="20dp"-->
+    <!--android:text="@string/candidate_update_a_2"-->
+    <!--android:textColor="@color/text_color_black_666666"-->
+    <!--android:textSize="@dimen/text_size_14" />-->
+
+    <!--<View style="@style/line_horizontal_D3D3D3" />-->
+
+    <!--<TextView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginBottom="10dp"-->
+    <!--android:layout_marginTop="20dp"-->
+    <!--android:text="@string/candidate_update_q_3"-->
+    <!--android:textColor="@color/text_color_orange_F98F33"-->
+    <!--android:textSize="@dimen/text_size_14" />-->
+
+    <!--<TextView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginBottom="20dp"-->
+    <!--android:text="@string/candidate_update_a_3"-->
+    <!--android:textColor="@color/text_color_black_666666"-->
+    <!--android:textSize="@dimen/text_size_14" />-->
+
+    <!--<View style="@style/line_horizontal_D3D3D3" />-->
+
+    <!--<TextView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginBottom="10dp"-->
+    <!--android:layout_marginTop="20dp"-->
+    <!--android:text="@string/candidate_update_q_4"-->
+    <!--android:textColor="@color/text_color_orange_F98F33"-->
+    <!--android:textSize="@dimen/text_size_14" />-->
+
+    <!--<TextView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginBottom="10dp"-->
+    <!--android:text="@string/candidate_update_a_4"-->
+    <!--android:textColor="@color/text_color_black_666666"-->
+    <!--android:textSize="@dimen/text_size_14" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv_update_grade"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginBottom="20dp"-->
+    <!--android:clickable="true"-->
+    <!--android:onClick="onClick"-->
+    <!--android:textColor="#F5A623"-->
+    <!--android:textSize="@dimen/text_size_14" />-->
+    <!--</LinearLayout>-->
+    <!--</ScrollView>-->
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/line_D3DFEF"
+        android:dividerHeight="0.5dp"
+        android:footerDividersEnabled="false"
+        android:headerDividersEnabled="false"
+        android:listSelector="@android:color/transparent" />
+</LinearLayout>

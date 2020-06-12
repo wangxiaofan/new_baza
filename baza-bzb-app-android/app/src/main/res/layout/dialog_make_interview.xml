@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="候&#8194;选&#8194;人："
+            android:textColor="#4E5968"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="XX"
+            android:textColor="#0D315C"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="面试职位："
+            android:textColor="#4E5968"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tv_major"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="XX"
+            android:textColor="#0D315C"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_10"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/cb_one"
+            style="@style/cb_refuse"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:layout_marginTop="0dp"
+            android:checked="true"
+            android:paddingLeft="@dimen/dp_4"
+            android:text="现场面试" />
+
+        <CheckBox
+            android:id="@+id/cb_two"
+            style="@style/cb_refuse"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:layout_marginTop="0dp"
+            android:paddingLeft="@dimen/dp_4"
+            android:text="电话面试" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="面试时间:"
+            android:textColor="#4E5968"
+            android:textSize="13sp" />
+
+
+        <LinearLayout
+            android:id="@+id/ll_date"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_21"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:background="@drawable/right_center_area_bg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/dp_10">
+
+            <ImageView
+                android:layout_width="@dimen/dp_12"
+                android:layout_height="@dimen/dp_11"
+                android:background="@drawable/icon_xuanzeriqi" />
+
+            <TextView
+                android:id="@+id/tv_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_5"
+                android:text="选择日期"
+                android:textColor="#A4A4A4"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="面试地点:"
+            android:textColor="#4E5968"
+            android:textSize="13sp" />
+
+        <EditText
+            android:id="@+id/et_address"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_55"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:background="@drawable/right_center_area_bg"
+            android:gravity="top"
+            android:hint="请输入面试地址"
+            android:maxLength="128"
+            android:padding="5dp"
+            android:textColor="#0D315C"
+            android:textColorHint="#A4A4A4"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="联&#8194;系&#8194;人："
+            android:textColor="#4E5968"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tv_contact_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="XX"
+            android:textColor="#0D315C"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:text="给候选人留言："
+        android:textColor="#4E5968"
+        android:textSize="13sp" />
+
+    <EditText
+        android:id="@+id/et_remark"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_65"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/right_center_area_bg"
+        android:gravity="top"
+        android:hint="在给候选人邮件中那个附加留言（最多写50字）"
+        android:maxLength="128"
+        android:padding="5dp"
+        android:textColor="#0D315C"
+        android:textColorHint="#A4A4A4"
+        android:textSize="12sp" />
+
+    <CheckBox
+        android:id="@+id/cb_send_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:button="@drawable/cb_share_title_style"
+        android:checked="false"
+        android:paddingLeft="@dimen/dp_6"
+        android:text="使用短信、邮件通知双方"
+        android:textColor="#0D315C"
+        android:textSize="12sp" />
+</LinearLayout>

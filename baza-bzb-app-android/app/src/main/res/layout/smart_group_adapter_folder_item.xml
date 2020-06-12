@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.handmark.pulltorefresh.library.SwipeMenuLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/swipe_layout">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/content_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/selector_background_click_default_with_bottom_line"
+        android:padding="@dimen/dp_20">
+
+        <TextView
+            android:id="@+id/tv_count_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="@dimen/dp_10"
+            android:drawableRight="@drawable/icon_arrow_gray_next_samll"
+            android:textColor="@color/text_color_grey_9E9E9E"
+            android:textSize="@dimen/text_size_10"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_group_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/smart_group_ic_folder"
+            android:drawablePadding="@dimen/dp_10"
+            android:textColor="@color/text_color_blue_0D315C"
+            android:textSize="@dimen/text_size_13"
+            android:maxLines="1"
+            android:ellipsize="end"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/tv_count_info"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <!--侧滑menu-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:clickable="false"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:id="@id/view_resume_ele_side_menu_one"
+            android:layout_width="@dimen/dp_70"
+            android:layout_height="match_parent"
+            android:background="@color/text_color_blue_53ABD5"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingRight="@dimen/dp_10">
+
+            <TextView
+                android:id="@id/view_resume_ele_side_menu_one_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:drawablePadding="@dimen/dp_5"
+                android:drawableTop="@drawable/smart_group_ic_modify"
+                android:gravity="center"
+                android:text="@string/modify_smart_group_name"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_size_11" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@id/view_resume_ele_side_menu_two"
+            android:layout_width="@dimen/dp_70"
+            android:layout_height="match_parent"
+            android:background="#FF6564"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingRight="@dimen/dp_10">
+
+            <TextView
+                android:id="@id/view_resume_ele_side_menu_one_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:drawablePadding="@dimen/dp_5"
+                android:drawableTop="@drawable/smart_group_ic_delete"
+                android:gravity="center"
+                android:text="@string/delete_smart_group"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_size_11" />
+        </FrameLayout>
+    </LinearLayout>
+</com.handmark.pulltorefresh.library.SwipeMenuLayout>

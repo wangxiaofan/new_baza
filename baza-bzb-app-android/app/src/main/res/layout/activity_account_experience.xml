@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <include layout="@layout/title_bar_default_left_imageview_right_textview" />
+
+    <include
+        layout="@layout/view_two_level_head_view"
+        android:layout_width="@dimen/dp_60"
+        android:layout_height="@dimen/dp_60"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dp_20" />
+
+    <TextView
+        android:id="@+id/tv_grade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:gravity="center"
+        android:textColor="@color/text_color_blue_0D315C"
+        android:textSize="@dimen/text_size_14" />
+
+    <TextView
+        android:id="@+id/tv_experience_hint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_5"
+        android:gravity="center"
+        android:textColor="@color/text_color_black_4E5968"
+        android:textSize="@dimen/text_size_12" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_30"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_grade_pointer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_5"
+            android:background="@drawable/icon_grade_pointer"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_12" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_8"
+            android:layout_marginLeft="@dimen/dp_30"
+            android:layout_marginRight="@dimen/dp_30"
+            android:max="100"
+            android:progressDrawable="@drawable/grade_progress" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_30"
+            android:layout_marginRight="@dimen/dp_30">
+
+            <TextView
+                android:id="@+id/tv_grade_resume_low"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color_grey_94A1A5"
+                android:textSize="@dimen/text_size_12" />
+
+            <TextView
+                android:id="@+id/tv_grade_resume_high"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:textColor="@color/text_color_grey_94A1A5"
+                android:textSize="@dimen/text_size_12" />
+        </FrameLayout>
+    </LinearLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_default_with_bottom_line"
+                android:padding="@dimen/dp_15"
+                android:text="@string/grade_and_right"
+                android:textColor="@color/text_color_blue_0D315C"
+                android:textSize="@dimen/text_size_14" />
+
+
+            <!--<FrameLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:background="@drawable/background_default_with_bottom_line"-->
+                <!--android:padding="@dimen/dp_15">-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="@string/grade_of_enable_request_share_count"-->
+                    <!--android:textColor="@color/text_color_black_4E5968"-->
+                    <!--android:textSize="@dimen/text_size_12" />-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/tv_enable_request_share_count"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_gravity="right"-->
+                    <!--android:textColor="@color/text_color_black_4E5968"-->
+                    <!--android:textSize="@dimen/text_size_12" />-->
+            <!--</FrameLayout>-->
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_default_with_bottom_line"
+                android:padding="@dimen/dp_15">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/grade_of_enable_update_count"
+                    android:textColor="@color/text_color_black_4E5968"
+                    android:textSize="@dimen/text_size_12" />
+
+                <TextView
+                    android:id="@+id/tv_enable_update_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:textColor="@color/text_color_black_4E5968"
+                    android:textSize="@dimen/text_size_12" />
+            </FrameLayout>
+
+            <!--<FrameLayout-->
+                <!--android:id="@+id/fl_list_receive"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:background="@drawable/background_default_with_bottom_line"-->
+                <!--android:padding="@dimen/dp_15">-->
+
+            <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:text="@string/grade_of_enable_contact_book_count"-->
+                    <!--android:textColor="@color/text_color_black_4E5968"-->
+                    <!--android:textSize="@dimen/text_size_12" />-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/tv_enable_contact_book_count"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_gravity="right"-->
+                    <!--android:textColor="@color/text_color_black_4E5968"-->
+                    <!--android:textSize="@dimen/text_size_12" />-->
+            <!--</FrameLayout>-->
+
+            <!--<FrameLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:background="@drawable/background_default_with_bottom_line"-->
+                <!--android:padding="@dimen/dp_15">-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:text="@string/grade_of_enable_list_match_count"-->
+                    <!--android:textColor="@color/text_color_black_4E5968"-->
+                    <!--android:textSize="@dimen/text_size_12" />-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/tv_enable_list_match_count"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_gravity="right"-->
+                    <!--android:textColor="@color/text_color_black_4E5968"-->
+                    <!--android:textSize="@dimen/text_size_12" />-->
+            <!--</FrameLayout>-->
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/view_title_bar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/title_bar_main_theme">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_bar_height">
+
+
+        <ImageView
+            android:id="@+id/iv_left_click"
+            android:layout_width="@dimen/title_bar_height"
+            android:layout_height="@dimen/title_bar_height"
+            android:onClick="onClick"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_nav_back" />
+
+        <TextView
+            android:id="@+id/tv_right_click"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/title_bar_height"
+            android:layout_gravity="right"
+            android:gravity="center"
+            android:minWidth="@dimen/title_bar_height"
+            android:onClick="onClick"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingRight="@dimen/dp_10"
+            android:textColor="@color/text_color_blue_0D315C"
+            android:textSize="@dimen/text_size_10" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/dp_50"
+            android:layout_marginRight="@dimen/dp_50"
+            android:orientation="horizontal">
+
+            <ProgressBar
+                android:id="@+id/mpb"
+                style="@style/Widget.MaterialProgressBar.ProgressBar.Large"
+                android:layout_width="@dimen/dp_15"
+                android:layout_height="@dimen/dp_15"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="@dimen/dp_10"
+                android:indeterminate="true"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/sync_email_resume"
+                android:textColor="@color/text_color_blue_0D315C"
+                android:textSize="@dimen/text_size_14" />
+        </LinearLayout>
+
+    </FrameLayout>
+
+
+</FrameLayout>

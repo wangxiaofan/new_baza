@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <ListView
+        android:id="@+id/lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@null"
+        android:scrollbars="none"
+        android:dividerHeight="0dp"
+        android:listSelector="@android:color/transparent" />
+
+    <com.baza.android.bzw.widget.SideBar
+        android:id="@+id/sideBar"
+        android:layout_width="@dimen/dp_20"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:layout_height="match_parent"
+        android:layout_gravity="right" />
+
+    <TextView
+        android:id="@+id/tv_classify_hint"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:background="@drawable/shape_background_record_hint"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_size_28"
+        android:visibility="gone" />
+</FrameLayout>

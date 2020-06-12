@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/adapter_search_rel"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="20dp"
+    android:paddingTop="10dp"
+    android:paddingRight="20dp">
+
+    <ImageView
+        android:id="@+id/adapter_search_img"
+        android:layout_width="50dp"
+        android:layout_height="50dp" />
+
+    <TextView
+        android:id="@+id/adapter_search_name"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/adapter_search_img"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="#0D315C"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/adapter_search_last"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/adapter_search_name"
+        android:layout_alignBottom="@+id/adapter_search_img"
+        android:layout_toRightOf="@+id/adapter_search_img"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="#888888"
+        android:textSize="12sp"
+        android:visibility="gone" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/adapter_search_img"
+        android:layout_marginTop="10dp"
+        android:background="#EEEEEE" />
+
+</RelativeLayout>

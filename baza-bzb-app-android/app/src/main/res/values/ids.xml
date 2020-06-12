@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="define_id_loadingView" type="id" />
+    <item name="hold_tag_id_one" type="id" />
+    <item name="hold_tag_id_two" type="id" />
+    <item name="filter_id_tag" type="id" />
+    <item name="id_animate_view" type="id" />
+
+    <item name="item_addressee_previous" type="id" />
+    <item name="addressee_item_id" type="id" />
+    <item name="resume_item_id_name" type="id" />
+    <item name="resume_item_id_sex" type="id" />
+    <item name="resume_item_id_workYear" type="id" />
+    <item name="resume_item_id_city" type="id" />
+    <item name="resume_item_id_degree" type="id" />
+    <item name="resume_item_id_company" type="id" />
+    <item name="resume_item_id_job" type="id" />
+    <item name="resume_item_id_contact" type="id" />
+    <item name="resume_item_id_email" type="id" />
+    <item name="clear_history" type="id" />
+
+    <item name="set_item_id_name" type="id" />
+    <item name="set_item_id_workYear" type="id" />
+    <item name="set_item_id_city" type="id" />
+    <item name="set_item_id_degree" type="id" />
+    <item name="set_item_id_company" type="id" />
+    <item name="set_item_id_job" type="id" />
+    <item name="set_item_id_contact" type="id" />
+    <item name="set_item_id_email" type="id" />
+    <item name="set_item_id_school" type="id" />
+    <item name="set_item_id_major" type="id" />
+    <item name="set_item_id_sex" type="id" />
+    <item name="set_item_id_hukou" type="id" />
+    <item name="set_item_id_marriage" type="id" />
+    <item name="set_item_id_birthday" type="id" />
+
+    <item name="dynamic_id_click_one" type="id" />
+
+    <item name="user_set_item_nickname" type="id" />
+    <item name="user_set_item_city" type="id" />
+    <item name="user_set_item_cellphone" type="id" />
+    <item name="user_set_item_email" type="id" />
+    <item name="user_set_item_identify" type="id" />
+    <item name="user_set_item_version" type="id" />
+
+    <item name="account_count_view_resume" type="id" />
+    <item name="account_count_view_update" type="id" />
+    <item name="account_count_view_receive" type="id" />
+    <!--<item name="account_count_view_publish" type="id" />-->
+    <!--<item name="account_count_view_comment" type="id" />-->
+
+    <item name="view_resume_ele_real_name" type="id" />
+    <item name="view_resume_ele_title" type="id" />
+    <item name="view_resume_ele_second_main_info" type="id" />
+    <item name="view_resume_ele_company_info" type="id" />
+    <item name="view_resume_ele_school_info" type="id" />
+    <item name="view_resume_ele_sub_info" type="id" />
+    <item name="view_resume_ele_labels" type="id" />
+    <item name="view_resume_ele_operator" type="id" />
+    <item name="view_resume_ele_source_from" type="id" />
+    <item name="view_resume_ele_hunter_job" type="id" />
+    <item name="view_resume_ele_side_menu_one" type="id" />
+    <item name="view_resume_ele_side_menu_two" type="id" />
+    <item name="view_resume_ele_side_menu_one_text" type="id" />
+    <item name="view_resume_ele_side_menu_two_text" type="id" />
+    <item name="view_resume_ele_content" type="id" />
+    <item name="view_resume_ele_hukou_info" type="id" />
+
+
+    <item name="id_current_item" type="id" />
+    <item name="id_before_item" type="id" />
+
+    <item name="iv_add_tag" type="id" />
+    <item name="tv_username_tag" type="id" />
+
+</resources>

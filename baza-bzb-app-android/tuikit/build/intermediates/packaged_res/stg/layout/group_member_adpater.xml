@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/member_adapter_lin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <com.tencent.qcloud.tim.uikit.component.gatherimage.ShadeImageView
+            android:id="@+id/group_member_icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:scaleType="centerInside" />
+
+        <TextView
+            android:id="@+id/group_member_name"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:lines="1"
+            android:maxEms="3"
+            android:textColor="#888888"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/group_member_del"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginLeft="-12dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/member_adapter_lin"
+        android:src="@drawable/btn_shanchu_01"
+        android:visibility="gone" />
+</RelativeLayout>

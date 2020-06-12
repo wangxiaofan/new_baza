@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_bar_default_left_imageview_right_textview" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:text="@string/email_assigner"
+                    android:textColor="@color/text_color_black_333333"
+                    android:textSize="@dimen/text_size_13" />
+
+                <com.baza.android.bzw.widget.ClearEditText
+                    android:id="@+id/et_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="@string/input_email_hint"
+                    android:inputType="textEmailAddress"
+                    android:maxLength="50"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color_black_333333"
+                    android:textColorHint="@color/edit_text_hint_color_C0CADB"
+                    android:textSize="@dimen/text_size_13" />
+            </LinearLayout>
+
+            <View style="@style/line_horizontal_D3D3D3" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:text="@string/email_title"
+                    android:textColor="@color/text_color_black_333333"
+                    android:textSize="@dimen/text_size_13" />
+
+                <com.baza.android.bzw.widget.ClearEditText
+                    android:id="@+id/et_input_email_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@null"
+                    android:maxLength="50"
+                    android:gravity="center_vertical"
+                    android:hint="@string/input_email_title"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color_black_333333"
+                    android:textColorHint="@color/edit_text_hint_color_C0CADB"
+                    android:textSize="@dimen/text_size_13" />
+            </LinearLayout>
+
+            <View style="@style/line_horizontal_D3D3D3" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <EditText
+                    android:id="@+id/et_input_email_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="left|top"
+                    android:hint="@string/input_content"
+                    android:lines="8"
+                    android:inputType="textEmailAddress"
+                    android:maxLength="500"
+                    android:textColor="@color/text_color_black_333333"
+                    android:textColorHint="@color/edit_text_hint_color_C0CADB"
+                    android:textSize="@dimen/text_size_13" />
+
+                <FrameLayout
+                    android:id="@+id/fl_add_attachment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:onClick="onClick"
+                    android:clickable="true"
+                    android:layout_marginTop="5dp">
+
+                    <CheckBox
+                        android:id="@+id/cb_attachment_count"
+                        android:layout_width="50dp"
+                        android:layout_height="25dp"
+                        android:background="@drawable/checker_background_email_with_attachment"
+                        android:button="@null"
+                        android:checked="false"
+                        android:drawableLeft="@drawable/checker_email_with_attachment"
+                        android:drawablePadding="5dp"
+                        android:enabled="false"
+                        android:clickable="false"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="0"
+                        android:textColor="@drawable/text_color_checker_gray_white"
+                        android:textSize="@dimen/text_size_13" />
+                </FrameLayout>
+            </LinearLayout>
+
+            <com.baza.android.bzw.widget.NOScrollGridView
+                android:id="@+id/gv_attachment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="30dp"
+                android:horizontalSpacing="10dp"
+                android:numColumns="4"
+                android:listSelector="@drawable/selector_background_click_default_with_bottom_line"
+                android:verticalSpacing="10dp" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

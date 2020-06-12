@@ -1,0 +1,39 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion project.global_compileSdkVersion as int
+    buildToolsVersion project.global_buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion project.global_minSdkVersion as int
+        targetSdkVersion project.global_targetSdkVersion as int
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        debug {
+        }
+        xxx {
+        }
+        rc {
+        }
+        stg {
+        }
+
+        release {
+        }
+    }
+}
+dependencies {
+    api  fileTree(include: ['*.jar'], dir: 'libs')
+    api  project.global_cardview
+    api  project.global_design_support
+    api  project(':simpledialog')
+    api  'com.alibaba:fastjson:1.1.71.android'
+    api  'com.squareup.okhttp3:okhttp:3.10.0'
+    api  'com.github.bumptech.glide:glide:4.9.0'
+    annotationProcessor 'androidx.annotation:annotation:1.1.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
+    api  'com.github.bumptech.glide:okhttp3-integration:4.9.0'
+    api  'com.bm.photoview:library:1.4.1'
+}

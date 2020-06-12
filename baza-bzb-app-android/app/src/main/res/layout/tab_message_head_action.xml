@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv_head_title"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:paddingLeft="@dimen/dp_15"-->
+    <!--android:paddingRight="@dimen/dp_15"-->
+    <!--android:text="@string/message"-->
+    <!--android:textColor="@color/text_color_blue_0D315C"-->
+    <!--android:textSize="@dimen/text_size_17"-->
+    <!--app:layout_constraintLeft_toLeftOf="parent"-->
+    <!--app:layout_constraintRight_toRightOf="parent" />-->
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_msg_sys"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_background_click_default_with_bottom_line"
+        android:paddingLeft="@dimen/dp_15"
+        android:paddingTop="@dimen/dp_15"
+        android:paddingRight="@dimen/dp_15"
+        android:paddingBottom="@dimen/dp_15"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_1"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_40"
+            android:src="@drawable/tab_msg_ic_notice"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:drawableRight="@drawable/icon_arrow_gray_next_samll"
+            android:text="@string/sys_notice"
+            android:textColor="@color/text_color_blue_0D315C"
+            android:textSize="@dimen/text_size_13"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/iv_1"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_sys_unread_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_background_un_read"
+            android:paddingLeft="@dimen/dp_5"
+            android:paddingRight="@dimen/dp_5"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_9"
+            android:visibility="gone"
+            app:layout_constraintRight_toRightOf="@id/iv_1"
+            app:layout_constraintTop_toTopOf="@id/iv_1" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--<android.support.constraint.ConstraintLayout-->
+    <!--android:id="@+id/cl_wait_process"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="@drawable/selector_background_click_default_with_bottom_line"-->
+    <!--android:paddingBottom="@dimen/dp_15"-->
+    <!--android:paddingLeft="@dimen/dp_15"-->
+    <!--android:paddingRight="@dimen/dp_15"-->
+    <!--android:paddingTop="@dimen/dp_15"-->
+    <!--app:layout_constraintTop_toBottomOf="@id/cl_msg_sys">-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/iv_2"-->
+    <!--android:layout_width="@dimen/dp_40"-->
+    <!--android:layout_height="@dimen/dp_40"-->
+    <!--android:src="@drawable/tab_msg_ic_precess_event"-->
+    <!--app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--app:layout_constraintLeft_toLeftOf="parent"-->
+    <!--app:layout_constraintTop_toTopOf="parent" />-->
+
+    <!--<TextView-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginLeft="@dimen/dp_10"-->
+    <!--android:drawableRight="@drawable/icon_arrow_gray_next_samll"-->
+    <!--android:text="@string/need_process_event"-->
+    <!--android:textColor="@color/text_color_blue_0D315C"-->
+    <!--android:textSize="@dimen/text_size_13"-->
+    <!--app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--app:layout_constraintLeft_toRightOf="@id/iv_2"-->
+    <!--app:layout_constraintRight_toRightOf="parent"-->
+    <!--app:layout_constraintTop_toTopOf="parent" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv_process_unread_count"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="@drawable/shape_background_un_read"-->
+    <!--android:gravity="center"-->
+    <!--android:paddingLeft="@dimen/dp_5"-->
+    <!--android:paddingRight="@dimen/dp_5"-->
+    <!--android:textColor="@android:color/white"-->
+    <!--android:textSize="@dimen/text_size_9"-->
+    <!--android:visibility="gone"-->
+    <!--app:layout_constraintRight_toRightOf="@id/iv_2"-->
+    <!--app:layout_constraintTop_toTopOf="@id/iv_2" />-->
+    <!--</android.support.constraint.ConstraintLayout>-->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_baza_helper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_background_click_default_with_bottom_line"
+        android:paddingLeft="@dimen/dp_15"
+        android:paddingTop="@dimen/dp_15"
+        android:paddingRight="@dimen/dp_15"
+        android:paddingBottom="@dimen/dp_15"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/cl_msg_sys">
+
+        <ImageView
+            android:id="@+id/iv_3"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_40"
+            android:src="@drawable/tab_msg_baza_helper"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:drawableRight="@drawable/icon_arrow_gray_next_samll"
+            android:text="@string/baza_helper"
+            android:textColor="@color/text_color_blue_0D315C"
+            android:textSize="@dimen/text_size_13"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/iv_3"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--<TextView-->
+        <!--android:id="@+id/tv_process_unread_count"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="@drawable/shape_background_un_read"-->
+        <!--android:gravity="center"-->
+        <!--android:paddingLeft="@dimen/dp_5"-->
+        <!--android:paddingRight="@dimen/dp_5"-->
+        <!--android:textColor="@android:color/white"-->
+        <!--android:textSize="@dimen/text_size_9"-->
+        <!--android:visibility="gone"-->
+        <!--app:layout_constraintRight_toRightOf="@id/iv_2"-->
+        <!--app:layout_constraintTop_toTopOf="@id/iv_2" />-->
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_msg_recommend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_background_click_default_with_bottom_line"
+        android:paddingLeft="@dimen/dp_15"
+        android:paddingTop="@dimen/dp_15"
+        android:paddingRight="@dimen/dp_15"
+        android:paddingBottom="@dimen/dp_15"
+        app:layout_constraintTop_toBottomOf="@id/cl_baza_helper">
+
+        <ImageView
+            android:id="@+id/iv_4"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_40"
+            android:src="@drawable/tab_msg_ic_precess_event"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:drawableRight="@drawable/icon_arrow_gray_next_samll"
+            android:text="@string/recommend_title"
+            android:textColor="@color/text_color_blue_0D315C"
+            android:textSize="@dimen/text_size_13"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/iv_4"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_recommend_unread_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_background_un_read"
+            android:paddingLeft="@dimen/dp_5"
+            android:paddingRight="@dimen/dp_5"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_9"
+            android:visibility="gone"
+            app:layout_constraintRight_toRightOf="@id/iv_4"
+            app:layout_constraintTop_toTopOf="@id/iv_4" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

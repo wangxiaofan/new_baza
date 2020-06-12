@@ -1,0 +1,32 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion project.global_compileSdkVersion as int
+    buildToolsVersion project.global_buildToolsVersion
+    defaultConfig {
+        minSdkVersion project.global_minSdkVersion as int
+        targetSdkVersion project.global_targetSdkVersion as int
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        debug {
+        }
+        xxx {
+        }
+        rc {
+        }
+        stg {
+        }
+
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation global_constraint_layout
+}

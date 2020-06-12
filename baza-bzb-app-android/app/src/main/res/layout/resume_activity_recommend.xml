@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/view_title_bar"
+        layout="@layout/title_bar_default_left_imageview"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/date_select_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:layout_marginTop="@dimen/dp_15"
+        android:text="@string/chose_date"
+        android:textColor="@color/text_color_black_4E5968"
+        android:textSize="@dimen/text_size_12"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_title_bar" />
+
+    <TextView
+        android:id="@+id/tv_date_show"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/icon_recommend_date_next_l"
+        android:drawableRight="@drawable/icon_recommend_date_next_r"
+        android:drawablePadding="@dimen/dp_15"
+        android:paddingLeft="@dimen/dp_15"
+        android:paddingRight="@dimen/dp_15"
+        android:textColor="@color/text_color_black_4E5968"
+        android:textSize="@dimen/text_size_12"
+        app:layout_constraintBottom_toBottomOf="@id/date_select_title"
+        app:layout_constraintLeft_toRightOf="@id/date_select_title"
+        app:layout_constraintTop_toTopOf="@id/date_select_title" />
+
+
+    <CheckBox
+        android:id="@+id/cb_date_delay_count"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:layout_marginTop="@dimen/dp_15"
+        android:layout_weight="1"
+        android:background="@drawable/resume_recommend_delay_bg"
+        android:button="@null"
+        android:gravity="center"
+        android:paddingTop="@dimen/dp_2"
+        android:paddingBottom="@dimen/dp_2"
+        android:textColor="@drawable/text_color_recommend_delay"
+        android:textSize="@dimen/text_size_12"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/date_select_title"
+        app:layout_constraintWidth_percent="0.35" />
+
+    <CheckBox
+        android:id="@+id/cb_complete_count"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_15"
+        android:layout_weight="1"
+        android:background="@drawable/resume_recommend_completed_bg"
+        android:button="@null"
+        android:gravity="center"
+        android:paddingTop="@dimen/dp_2"
+        android:paddingBottom="@dimen/dp_2"
+        android:textColor="@drawable/text_color_recommend_completed"
+        android:textSize="@dimen/text_size_12"
+        app:layout_constraintLeft_toRightOf="@id/cb_date_delay_count"
+        app:layout_constraintTop_toBottomOf="@id/date_select_title"
+        app:layout_constraintWidth_percent="0.35" />
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cb_date_delay_count">
+
+        <com.baza.android.bzw.widget.LoadingView
+            android:id="@+id/loading_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.handmark.pulltorefresh.library.PullToRefreshListView
+            android:id="@+id/pull_to_refresh_listView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/dp_10"
+            android:divider="@null"
+            android:dividerHeight="0dp"
+            android:listSelector="@android:color/transparent"
+            android:scrollbars="none" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

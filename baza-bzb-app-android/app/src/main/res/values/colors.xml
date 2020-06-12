@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorAccent">#53ABD5</color>
+    <color name="colorPrimary">#53ABD5</color>
+    <color name="colorPrimaryDark">#53ABD5</color>
+    <!--main color-->
+    <!--<color name="status_bar_default_color">#1A000000</color>-->
+    <color name="main_them_color">#53ABD5</color>
+    <color name="background_main">#f4f5f9</color>
+    <color name="main_progress">#53ABD5</color>
+    <color name="default_empty_image">#F5F5F5</color>
+    <color name="select">#1A000000</color>
+    <color name="color_red_FF6564">#FF6564</color>
+    <color name="color_red_900515">#900515</color>
+    <color name="color_355986">#355986</color>
+    <color name="text_color_orange_FF7700">#FFA638</color>
+    <!--textColor-->
+    <color name="text_color_grey_C1CADB">#C1CADB</color>
+    <color name="text_color_grey_94A1A5">#94A1A5</color>
+    <color name="text_color_grey_E9EAEC">#E9EAEC</color>
+    <color name="text_color_blue_0D315C">#0D315C</color>
+    <color name="text_color_black_666666">#666666</color>
+    <color name="text_color_black_282828">#282828</color>
+    <color name="text_color_black_3D5A7D">#3D5A7D</color>
+    <color name="text_color_black_4E5968">#4E5968</color>
+    <color name="text_color_gray_a9adb3">#a9adb3</color>
+    <color name="text_color_black_555555">#555555</color>
+    <color name="text_color_black_4A4A4A">#4A4A4A</color>
+    <color name="text_color_grey_C0CAD8">#C0CAD8</color>
+    <color name="text_color_grey_D3D3D3">#D3D3D3</color>
+    <color name="text_color_blue_53ABD5">#53ABD5</color>
+    <color name="text_color_yellow_ffd48c">#ffd48c</color>
+    <color name="edit_text_hint_color_C0CADB">#C0CADB</color>
+    <color name="edit_text_hint_color_D3DFEF">#D3DFEF</color>
+    <color name="background_2053ABD5">#2053ABD5</color>
+    <color name="background_5053ABD5">#F9F9F9</color>
+
+    <color name="line_D3DFEF">#D3DFEF</color>
+    <color name="choose_text_color">#092E59</color>
+    <color name="choose_text_color_no">#888888</color>
+</resources>

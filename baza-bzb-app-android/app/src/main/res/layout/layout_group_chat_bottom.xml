@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/group_chat_search_bottom"
+    android:layout_width="match_parent"
+    android:layout_height="50dp">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#DFDFDF" />
+
+    <TextView
+        android:id="@+id/add_group_bottom_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="20dp"
+        android:text="已选择：0人"
+        android:textColor="#092E59"
+        android:textSize="15sp" />
+
+    <ImageView
+        android:id="@+id/add_group_bottom_iv"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/add_group_bottom_tv"
+        android:src="@drawable/btn_zhankai" />
+
+    <Button
+        android:id="@+id/add_group_bottom_btn"
+        android:layout_width="80dp"
+        android:layout_height="35dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/add_group_chat_sure_bg_grey"
+        android:enabled="false"
+        android:gravity="center"
+        android:text="确定"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp" />
+
+</RelativeLayout>

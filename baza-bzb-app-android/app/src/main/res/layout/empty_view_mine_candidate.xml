@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+        <!--android:drawableTop="@drawable/image_no_search_result"-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:drawablePadding="15dp"
+        android:gravity="center"
+        android:text="@string/no_resume_for_you"
+        android:textColor="@color/text_color_grey_9E9E9E"
+        android:textSize="@dimen/text_size_11" />
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:padding="15dp">-->
+
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:drawableLeft="@drawable/icon_platform_email"-->
+<!--            android:drawablePadding="10dp"-->
+<!--            android:gravity="center_vertical"-->
+<!--            android:text="@string/may_import_email_resume"-->
+<!--            android:textColor="@color/text_color_black_666666"-->
+<!--            android:textSize="@dimen/text_size_9" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/tv_import_email_resume"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginLeft="15dp"-->
+<!--            android:text="@string/import_now_b"-->
+<!--            android:textColor="@drawable/text_color_selector_orange_gray"-->
+<!--            android:textSize="@dimen/text_size_9" />-->
+<!--    </LinearLayout>-->
+
+<!--    <View-->
+<!--        style="@style/line_horizontal_D3D3D3"-->
+<!--        android:layout_marginLeft="15dp"-->
+<!--        android:layout_marginRight="15dp" />-->
+
+    <TextView
+        android:id="@+id/tv_pc_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/icon_platform_pc"
+        android:drawablePadding="10dp"
+        android:padding="15dp"
+        android:textColor="@color/text_color_black_666666"
+        android:textSize="@dimen/text_size_9" />
+
+</LinearLayout>

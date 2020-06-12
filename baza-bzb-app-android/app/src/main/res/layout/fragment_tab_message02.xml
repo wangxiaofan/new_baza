@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/view_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/message_title_rel"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/title_bar_height">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="80dp"
+                android:layout_marginRight="80dp"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="@string/message"
+                android:textColor="@color/text_color_blue_0D315C"
+                android:textSize="@dimen/text_size_14" />
+
+            <TextView
+                android:id="@+id/tv_right_click"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:background="@null"
+                android:clickable="true"
+                android:gravity="center"
+                android:minWidth="@dimen/title_bar_height"
+                android:onClick="onClick"
+                android:paddingLeft="@dimen/dp_15"
+                android:paddingRight="@dimen/dp_15"
+                android:text="@string/title_friend"
+                android:textColor="@color/text_color_blue_0D315C"
+                android:textSize="@dimen/text_size_11"
+                android:visibility="gone"
+                app:layout_constraintRight_toRightOf="parent" />
+
+            <ImageView
+                android:id="@+id/message_add"
+                android:layout_width="17dp"
+                android:layout_height="17dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/nav_btn_caidan" />
+
+            <View
+                android:id="@+id/view_new_friend_hint"
+                android:layout_width="@dimen/dp_8"
+                android:layout_height="@dimen/dp_8"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_10"
+                android:background="@drawable/small_red_doll"
+                android:visibility="gone"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </RelativeLayout>
+    </FrameLayout>
+
+    <include layout="@layout/layout_search" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/msg_search_lin"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+    <include layout="@layout/conversation_matters" />
+
+    <include layout="@layout/conversation_notification" />
+
+
+    <com.tencent.qcloud.tim.uikit.modules.conversation.ConversationLayout
+        android:id="@+id/conversation_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fastScrollEnabled="false" />
+     </LinearLayout>
+
+ </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/message_add_ql_rel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#50000000"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/message_add_ql"
+        android:layout_width="92dp"
+        android:layout_height="42dp"
+        android:layout_below="@+id/view_title_bar"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/message_add_ql_bg"
+        android:gravity="center"
+        android:shadowColor="#42000000"
+        android:shadowDx="0"
+        android:shadowDy="1"
+        android:text="发起群聊"
+        android:textColor="#4E5968"
+        android:textSize="11sp"
+        android:visibility="gone" />
+
+
+</RelativeLayout>

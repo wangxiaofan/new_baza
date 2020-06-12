@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Octopus-baza-bzb-app-android.iml" filepath="$PROJECT_DIR$/Octopus-baza-bzb-app-android.iml" group="baza-bzb-app-android" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/baza-bzb-app-android.iml" filepath="$PROJECT_DIR$/baza-bzb-app-android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/baza-bzb-app-android-app.iml" filepath="$PROJECT_DIR$/app/baza-bzb-app-android-app.iml" group="baza-bzb-app-android/app" />
+      <module fileurl="file://$PROJECT_DIR$/commonlibs/baza-bzb-app-android-commonlibs.iml" filepath="$PROJECT_DIR$/commonlibs/baza-bzb-app-android-commonlibs.iml" group="baza-bzb-app-android/commonlibs" />
+      <module fileurl="file://$PROJECT_DIR$/filePicker/baza-bzb-app-android-filePicker.iml" filepath="$PROJECT_DIR$/filePicker/baza-bzb-app-android-filePicker.iml" group="baza-bzb-app-android/filePicker" />
+      <module fileurl="file://$PROJECT_DIR$/im/baza-bzb-app-android-im.iml" filepath="$PROJECT_DIR$/im/baza-bzb-app-android-im.iml" group="baza-bzb-app-android/im" />
+      <module fileurl="file://$PROJECT_DIR$/jpush/baza-bzb-app-android-jpush.iml" filepath="$PROJECT_DIR$/jpush/baza-bzb-app-android-jpush.iml" group="baza-bzb-app-android/jpush" />
+      <module fileurl="file://$PROJECT_DIR$/location/baza-bzb-app-android-location.iml" filepath="$PROJECT_DIR$/location/baza-bzb-app-android-location.iml" group="baza-bzb-app-android/location" />
+      <module fileurl="file://$PROJECT_DIR$/multiprocesssimpleconnect/baza-bzb-app-android-multiprocesssimpleconnect.iml" filepath="$PROJECT_DIR$/multiprocesssimpleconnect/baza-bzb-app-android-multiprocesssimpleconnect.iml" group="baza-bzb-app-android/multiprocesssimpleconnect" />
+      <module fileurl="file://$PROJECT_DIR$/pickerview/baza-bzb-app-android-pickerview.iml" filepath="$PROJECT_DIR$/pickerview/baza-bzb-app-android-pickerview.iml" group="baza-bzb-app-android/pickerview" />
+      <module fileurl="file://$PROJECT_DIR$/pulltorefresh/baza-bzb-app-android-pulltorefresh.iml" filepath="$PROJECT_DIR$/pulltorefresh/baza-bzb-app-android-pulltorefresh.iml" group="baza-bzb-app-android/pulltorefresh" />
+      <module fileurl="file://$PROJECT_DIR$/qrcode/baza-bzb-app-android-qrcode.iml" filepath="$PROJECT_DIR$/qrcode/baza-bzb-app-android-qrcode.iml" group="baza-bzb-app-android/qrcode" />
+      <module fileurl="file://$PROJECT_DIR$/rangeseekbar/baza-bzb-app-android-rangeseekbar.iml" filepath="$PROJECT_DIR$/rangeseekbar/baza-bzb-app-android-rangeseekbar.iml" group="baza-bzb-app-android/rangeseekbar" />
+      <module fileurl="file://$PROJECT_DIR$/share/baza-bzb-app-android-share.iml" filepath="$PROJECT_DIR$/share/baza-bzb-app-android-share.iml" group="baza-bzb-app-android/share" />
+      <module fileurl="file://$PROJECT_DIR$/simpledialog/baza-bzb-app-android-simpledialog.iml" filepath="$PROJECT_DIR$/simpledialog/baza-bzb-app-android-simpledialog.iml" group="baza-bzb-app-android/simpledialog" />
+      <module fileurl="file://$PROJECT_DIR$/trackagentlibrary/baza-bzb-app-android-trackagentlibrary.iml" filepath="$PROJECT_DIR$/trackagentlibrary/baza-bzb-app-android-trackagentlibrary.iml" group="baza-bzb-app-android/trackagentlibrary" />
+      <module fileurl="file://$PROJECT_DIR$/commonlibs/commonlibs.iml" filepath="$PROJECT_DIR$/commonlibs/commonlibs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/filePicker/filePicker.iml" filepath="$PROJECT_DIR$/filePicker/filePicker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/im/im.iml" filepath="$PROJECT_DIR$/im/im.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jpush/jpush.iml" filepath="$PROJECT_DIR$/jpush/jpush.iml" />
+      <module fileurl="file://$PROJECT_DIR$/location/location.iml" filepath="$PROJECT_DIR$/location/location.iml" />
+      <module fileurl="file://$PROJECT_DIR$/multiprocesssimpleconnect/multiprocesssimpleconnect.iml" filepath="$PROJECT_DIR$/multiprocesssimpleconnect/multiprocesssimpleconnect.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pickerview/pickerview.iml" filepath="$PROJECT_DIR$/pickerview/pickerview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pulltorefresh/pulltorefresh.iml" filepath="$PROJECT_DIR$/pulltorefresh/pulltorefresh.iml" />
+      <module fileurl="file://$PROJECT_DIR$/qrcode/qrcode.iml" filepath="$PROJECT_DIR$/qrcode/qrcode.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rangeseekbar/rangeseekbar.iml" filepath="$PROJECT_DIR$/rangeseekbar/rangeseekbar.iml" />
+      <module fileurl="file://$PROJECT_DIR$/share/share.iml" filepath="$PROJECT_DIR$/share/share.iml" />
+      <module fileurl="file://$PROJECT_DIR$/simpledialog/simpledialog.iml" filepath="$PROJECT_DIR$/simpledialog/simpledialog.iml" />
+      <module fileurl="file://$PROJECT_DIR$/trackagentlibrary/trackagentlibrary.iml" filepath="$PROJECT_DIR$/trackagentlibrary/trackagentlibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tuikit/tuikit.iml" filepath="$PROJECT_DIR$/tuikit/tuikit.iml" group="baza-bzb-app-android/tuikit" />
+    </modules>
+  </component>
+</project>

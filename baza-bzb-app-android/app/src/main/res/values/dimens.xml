@@ -1,0 +1,15 @@
+<resources>
+    <dimen name="title_bar_height">40dp</dimen>
+    <dimen name="default_edit_text_height">30dp</dimen>
+    <dimen name="default_button_height">40dp</dimen>
+
+
+    <!--引导页-->
+
+    <dimen name="candidate_list_divider_default_height">10dp</dimen>
+
+    <dimen name="voice_record_touch_ui_height">106dp</dimen>
+    <dimen name="voice_record_show_info_ui_wh">160dp</dimen>
+
+    <dimen name="candidate_detail_more_operation_card_margin">5dp</dimen>
+</resources>

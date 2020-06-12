@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/view_resume_ele_content"
+        layout="@layout/resume_element_main_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ViewStub
+        android:id="@+id/viewStub_resume_main_info_old"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout="@layout/resume_element_main_info" />
+
+    <View
+        style="@style/line_horizontal_D3D3D3"
+        android:layout_margin="@dimen/dp_15" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:layout_marginRight="@dimen/dp_15"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_contact_phone"
+            style="@style/candidate_contact"
+            android:background="@drawable/phone_and_email_click_bg"
+            android:drawableLeft="@drawable/icon_phone"
+            android:gravity="center_vertical" />
+
+        <TextView
+            android:id="@+id/tv_contact_email"
+            style="@style/candidate_contact"
+            android:background="@drawable/phone_and_email_click_bg"
+            android:drawableLeft="@drawable/icon_email"
+            android:gravity="center_vertical" />
+    </LinearLayout>
+
+
+    <View
+        style="@style/line_horizontal_D3D3D3"
+        android:layout_margin="@dimen/dp_15" />
+
+    <FrameLayout
+        android:id="@+id/fl_add_remark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            style="@style/candidate_detail_title_base"
+            android:text="@string/seek_remark" />
+
+        <Button
+            android:id="@+id/btn_add_remark"
+            android:layout_width="@dimen/dp_56"
+            android:layout_height="@dimen/dp_24"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginRight="@dimen/dp_15"
+            android:background="@drawable/talent_mine_resume_add_remark_btn_bg"
+            android:gravity="center"
+            android:text="@string/add"
+            android:textColor="@color/text_color_blue_53ABD5"
+            android:textSize="@dimen/text_size_12" />
+
+    </FrameLayout>
+
+</LinearLayout>

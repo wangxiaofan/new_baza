@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_bar_company_resume_search" />
+
+    <LinearLayout
+        android:id="@+id/ll_company_filter"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/dp_15"
+        android:paddingRight="@dimen/dp_15"
+        android:visibility="gone">
+
+        <CheckBox
+            android:id="@+id/tv_no_look"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_24"
+            android:layout_marginLeft="@dimen/dp_8"
+            android:layout_weight="1"
+            android:background="@drawable/resume_search_cb_bg_job_hunter"
+            android:button="@null"
+            android:gravity="center"
+            android:text="只看未浏览"
+            android:textColor="@drawable/text_color_resume_search_job_hunter"
+            android:textSize="12sp" />
+
+        <CheckBox
+            android:id="@+id/tv_empty_num"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_24"
+            android:layout_marginLeft="@dimen/dp_8"
+            android:layout_weight="1"
+            android:background="@drawable/resume_search_cb_bg_job_hunter"
+            android:button="@null"
+            android:gravity="center"
+            android:text="排除空号"
+            android:textColor="@drawable/text_color_resume_search_job_hunter"
+            android:textSize="12sp" />
+
+        <CheckBox
+            android:id="@+id/tv_find_job"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_24"
+            android:layout_marginLeft="@dimen/dp_8"
+            android:layout_weight="1"
+            android:background="@drawable/resume_search_cb_bg_job_hunter"
+            android:button="@null"
+            android:gravity="center"
+            android:text="求职中的"
+            android:textColor="@drawable/text_color_resume_search_job_hunter"
+            android:textSize="12sp" />
+
+        <CheckBox
+            android:id="@+id/tv_good_school"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_24"
+            android:layout_marginLeft="@dimen/dp_8"
+            android:layout_weight="1"
+            android:background="@drawable/resume_search_cb_bg_job_hunter"
+            android:button="@null"
+            android:gravity="center"
+            android:text="985/211"
+            android:textColor="@drawable/text_color_resume_search_job_hunter"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <com.baza.android.bzw.widget.LoadingView
+        android:id="@+id/loading_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <include
+        android:id="@+id/view_no_result"
+        layout="@layout/empty_view_candidate_no_search_result" />
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/pull_to_refresh_listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        android:listSelector="@android:color/transparent" />
+</LinearLayout>

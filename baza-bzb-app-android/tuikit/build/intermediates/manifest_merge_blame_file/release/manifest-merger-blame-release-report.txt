@@ -1,0 +1,110 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.tencent.qcloud.tim.uikit"
+4    android:versionCode="96"
+5    android:versionName="5.2.2" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="16"
+8-->/Users/mac/Desktop/Octopus/baza-bzb-app-android/tuikit/src/main/AndroidManifest.xml
+9        android:targetSdkVersion="28" />
+9-->/Users/mac/Desktop/Octopus/baza-bzb-app-android/tuikit/src/main/AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+11-->/Users/mac/Desktop/Octopus/baza-bzb-app-android/tuikit/src/main/AndroidManifest.xml:4:5-79
+11-->/Users/mac/Desktop/Octopus/baza-bzb-app-android/tuikit/src/main/AndroidManifest.xml:4:22-76
+12    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+12-->/Users/mac/Desktop/Octopus/baza-bzb-app-android/tuikit/src/main/AndroidManifest.xml:5:5-76
+12-->/Users/mac/Desktop/Octopus/baza-bzb-app-android/tuikit/src/main/AndroidManifest.xml:5:22-73
+13    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+13-->/Users/mac/Desktop/Octopus/baza-bzb-app-android/tuikit/src/main/AndroidManifest.xml:6:5-75
+13-->/Users/mac/Desktop/Octopus/baza-bzb-app-android/tuikit/src/main/AndroidManifest.xml:6:22-72
+14    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+14-->/Users/mac/Desktop/Octopus/baza-bzb-app-android/tuikit/src/main/AndroidManifest.xml:7:5-81
+14-->/Users/mac/Desktop/Octopus/baza-bzb-app-android/tuikit/src/main/AndroidManifest.xml:7:22-78
+15    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+15-->/Users/mac/Desktop/Octopus/baza-bzb-app-android/tuikit/src/main/AndroidManifest.xml:8:5-80
+15-->/Users/mac/Desktop/Octopus/baza-bzb-app-android/tuikit/src/main/AndroidManifest.xml:8:22-77
+16
+17    <application>
+17-->/Users/mac/Desktop/Octopus/baza-bzb-app-android/tuikit/src/main/AndroidManifest.xml:10:5-53:19
+18        <uses-library
+18-->/Users/mac/Desktop/Octopus/baza-bzb-app-android/tuikit/src/main/AndroidManifest.xml:12:9-14:40
+19            android:name="org.apache.http.legacy"
+19-->/Users/mac/Desktop/Octopus/baza-bzb-app-android/tuikit/src/main/AndroidManifest.xml:13:13-50
+20            android:required="false" />
+20-->/Users/mac/Desktop/Octopus/baza-bzb-app-android/tuikit/src/main/AndroidManifest.xml:14:13-37
+21
+22        <activity
+22-->/Users/mac/Desktop/Octopus/baza-bzb-app-android/tuikit/src/main/AndroidManifest.xml:16:9-18:52
+23            android:name="com.tencent.qcloud.tim.uikit.modules.chat.ChooseFriendsActivity"
+23-->/Users/mac/Desktop/Octopus/baza-bzb-app-android/tuikit/src/main/AndroidManifest.xml:17:13-63
+24            android:screenOrientation="portrait" />
+24-->/Users/mac/Desktop/Octopus/baza-bzb-app-android/tuikit/src/main/AndroidManifest.xml:18:13-49
+25        <activity
+25-->/Users/mac/Desktop/Octopus/baza-bzb-app-android/tuikit/src/main/AndroidManifest.xml:20:9-22:52
+26            android:name="com.tencent.qcloud.tim.uikit.component.video.CameraActivity"
+26-->/Users/mac/Desktop/Octopus/baza-bzb-app-android/tuikit/src/main/AndroidManifest.xml:21:13-59
+27            android:screenOrientation="portrait" />
+27-->/Users/mac/Desktop/Octopus/baza-bzb-app-android/tuikit/src/main/AndroidManifest.xml:22:13-49
+28        <activity
+28-->/Users/mac/Desktop/Octopus/baza-bzb-app-android/tuikit/src/main/AndroidManifest.xml:23:9-25:77
+29            android:name="com.tencent.qcloud.tim.uikit.component.video.VideoViewActivity"
+29-->/Users/mac/Desktop/Octopus/baza-bzb-app-android/tuikit/src/main/AndroidManifest.xml:24:13-62
+30            android:configChanges="keyboardHidden|orientation|screenSize" />
+30-->/Users/mac/Desktop/Octopus/baza-bzb-app-android/tuikit/src/main/AndroidManifest.xml:25:13-74
+31        <activity
+31-->/Users/mac/Desktop/Octopus/baza-bzb-app-android/tuikit/src/main/AndroidManifest.xml:26:9-28:52
+32            android:name="com.tencent.qcloud.tim.uikit.component.photoview.PhotoViewActivity"
+32-->/Users/mac/Desktop/Octopus/baza-bzb-app-android/tuikit/src/main/AndroidManifest.xml:27:13-66
+33            android:screenOrientation="portrait" />
+33-->/Users/mac/Desktop/Octopus/baza-bzb-app-android/tuikit/src/main/AndroidManifest.xml:28:13-49
+34        <activity
+34-->/Users/mac/Desktop/Octopus/baza-bzb-app-android/tuikit/src/main/AndroidManifest.xml:29:9-31:52
+35            android:name="com.tencent.qcloud.tim.uikit.modules.group.info.GroupInfoActivity"
+35-->/Users/mac/Desktop/Octopus/baza-bzb-app-android/tuikit/src/main/AndroidManifest.xml:30:13-65
+36            android:screenOrientation="portrait" />
+36-->/Users/mac/Desktop/Octopus/baza-bzb-app-android/tuikit/src/main/AndroidManifest.xml:31:13-49
+37        <activity
+37-->/Users/mac/Desktop/Octopus/baza-bzb-app-android/tuikit/src/main/AndroidManifest.xml:32:9-34:52
+38            android:name="com.tencent.qcloud.tim.uikit.component.SelectionActivity"
+38-->/Users/mac/Desktop/Octopus/baza-bzb-app-android/tuikit/src/main/AndroidManifest.xml:33:13-56
+39            android:screenOrientation="portrait" />
+39-->/Users/mac/Desktop/Octopus/baza-bzb-app-android/tuikit/src/main/AndroidManifest.xml:34:13-49
+40        <activity
+40-->/Users/mac/Desktop/Octopus/baza-bzb-app-android/tuikit/src/main/AndroidManifest.xml:35:9-38:73
+41            android:name="com.tencent.qcloud.tim.uikit.modules.group.apply.GroupApplyManagerActivity"
+41-->/Users/mac/Desktop/Octopus/baza-bzb-app-android/tuikit/src/main/AndroidManifest.xml:36:13-74
+42            android:screenOrientation="portrait"
+42-->/Users/mac/Desktop/Octopus/baza-bzb-app-android/tuikit/src/main/AndroidManifest.xml:37:13-49
+43            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+43-->/Users/mac/Desktop/Octopus/baza-bzb-app-android/tuikit/src/main/AndroidManifest.xml:38:13-70
+44        <activity
+44-->/Users/mac/Desktop/Octopus/baza-bzb-app-android/tuikit/src/main/AndroidManifest.xml:39:9-42:73
+45            android:name="com.tencent.qcloud.tim.uikit.modules.group.apply.GroupApplyMemberActivity"
+45-->/Users/mac/Desktop/Octopus/baza-bzb-app-android/tuikit/src/main/AndroidManifest.xml:40:13-73
+46            android:screenOrientation="portrait"
+46-->/Users/mac/Desktop/Octopus/baza-bzb-app-android/tuikit/src/main/AndroidManifest.xml:41:13-49
+47            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+47-->/Users/mac/Desktop/Octopus/baza-bzb-app-android/tuikit/src/main/AndroidManifest.xml:42:13-70
+48
+49        <provider
+49-->/Users/mac/Desktop/Octopus/baza-bzb-app-android/tuikit/src/main/AndroidManifest.xml:44:9-52:20
+50            android:name="com.tencent.qcloud.tim.uikit.utils.TUIKitFileProvider"
+50-->/Users/mac/Desktop/Octopus/baza-bzb-app-android/tuikit/src/main/AndroidManifest.xml:45:13-53
+51            android:authorities="${applicationId}.uikit.fileprovider"
+51-->/Users/mac/Desktop/Octopus/baza-bzb-app-android/tuikit/src/main/AndroidManifest.xml:46:13-70
+52            android:exported="false"
+52-->/Users/mac/Desktop/Octopus/baza-bzb-app-android/tuikit/src/main/AndroidManifest.xml:47:13-37
+53            android:grantUriPermissions="true" >
+53-->/Users/mac/Desktop/Octopus/baza-bzb-app-android/tuikit/src/main/AndroidManifest.xml:48:13-47
+54            <meta-data
+54-->/Users/mac/Desktop/Octopus/baza-bzb-app-android/tuikit/src/main/AndroidManifest.xml:49:13-51:61
+55                android:name="android.support.FILE_PROVIDER_PATHS"
+55-->/Users/mac/Desktop/Octopus/baza-bzb-app-android/tuikit/src/main/AndroidManifest.xml:50:17-67
+56                android:resource="@xml/file_paths_public" />
+56-->/Users/mac/Desktop/Octopus/baza-bzb-app-android/tuikit/src/main/AndroidManifest.xml:51:17-58
+57        </provider>
+58    </application>
+59
+60</manifest>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_bar_default_left_imageview_right_textview" />
+
+    <com.baza.android.bzw.widget.NoScrollViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:padding="@dimen/dp_20">
+
+        <Button
+            android:id="@+id/btn_update"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="@dimen/dp_100"
+            android:layout_height="@dimen/default_button_height"
+            android:layout_marginRight="@dimen/dp_20"
+            android:layout_weight="1"
+            android:background="@drawable/resume_update_card_update_btn_bg"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:text="@string/update"
+            android:textColor="@color/text_color_blue_53ABD5"
+            android:textSize="@dimen/text_size_14" />
+
+        <Button
+            android:id="@+id/btn_ignore"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="@dimen/dp_100"
+            android:layout_height="@dimen/default_button_height"
+            android:layout_weight="1"
+            android:background="@drawable/resume_request_share_btn_bg"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:text="@string/next_one"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_14" />
+    </LinearLayout>
+
+</LinearLayout>

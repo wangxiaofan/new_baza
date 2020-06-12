@@ -1,0 +1,50 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion project.global_compileSdkVersion as int
+    buildToolsVersion project.global_buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion project.global_minSdkVersion as int
+        targetSdkVersion project.global_targetSdkVersion as int
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        debug {
+            buildConfigField("boolean", "LOG_ENABLE", "true")
+            buildConfigField("String", "LOG_DB_NAME", "\"bazaio_dev.db\"")
+            buildConfigField("String", "HOST_UPA", "\"http://api.upa.dev.bazhua.me/logsimport\"")
+        }
+        xxx {
+
+            buildConfigField("boolean", "LOG_ENABLE", "true")
+            buildConfigField("String", "LOG_DB_NAME", "\"bazaio_dev.db\"")
+            buildConfigField("String", "HOST_UPA", "\"http://api.upa.dev.bazhua.me/logsimport\"")
+        }
+        rc {
+            buildConfigField("boolean", "LOG_ENABLE", "true")
+            buildConfigField("String", "LOG_DB_NAME", "\"bazaio_rc.db\"")
+            buildConfigField("String", "HOST_UPA", "\"http://api.upa.rc.bazhua.me/logsimport\"")
+        }
+        stg {
+            buildConfigField("boolean", "LOG_ENABLE", "true")
+            buildConfigField("String", "LOG_DB_NAME", "\"bazaio_stg.db\"")
+            buildConfigField("String", "HOST_UPA", "\"http://api.upa.stg.bazhua.me/logsimport\"")
+        }
+
+        release {
+            buildConfigField("boolean", "LOG_ENABLE", "true")
+            buildConfigField("String", "LOG_DB_NAME", "\"bazaio_release.db\"")
+            buildConfigField("String", "HOST_UPA", "\"http://api.upa.bazhua.me/logsimport\"")
+        }
+    }
+
+}
+
+dependencies {
+    implementation project.global_appcompat
+    implementation project.global_recyclerview
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.0.0'
+}

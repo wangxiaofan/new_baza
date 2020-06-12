@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="43dp"
+    android:background="@drawable/default_title_line_background"
+    android:orientation="horizontal">
+
+
+    <FrameLayout
+        android:id="@+id/fl_city_filter"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:id="@+id/tv_cityFilter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawablePadding="@dimen/dp_10"
+            android:drawableRight="@drawable/name_list_ic_menu_drop_down"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="@string/city_all"
+            android:textColor="@color/text_color_grey_94A1A5"
+            android:textSize="@dimen/text_size_10" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_more_filter"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:id="@+id/tv_moreFilter"
+            android:layout_width="wrap_content"
+            android:layout_height="72dp"
+            android:layout_gravity="center"
+            android:drawablePadding="@dimen/dp_10"
+            android:drawableRight="@drawable/name_list_ic_menu_drop_down"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="@string/filter_more"
+            android:textColor="@color/text_color_grey_94A1A5"
+            android:textSize="@dimen/text_size_10" />
+    </FrameLayout>
+
+
+    <FrameLayout
+        android:id="@+id/fl_label_filter"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:id="@+id/tv_labelFilter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawablePadding="@dimen/dp_10"
+            android:drawableRight="@drawable/name_list_ic_menu_drop_down"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="@string/label"
+            android:textColor="@color/text_color_grey_94A1A5"
+            android:textSize="@dimen/text_size_10" />
+    </FrameLayout>
+
+
+    <FrameLayout
+        android:id="@+id/fl_sort_filter"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:id="@+id/tv_sortFilter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawablePadding="@dimen/dp_10"
+            android:drawableRight="@drawable/name_list_ic_menu_drop_down"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="@string/sort"
+            android:textColor="@color/text_color_grey_94A1A5"
+            android:textSize="@dimen/text_size_10" />
+    </FrameLayout>
+</LinearLayout>

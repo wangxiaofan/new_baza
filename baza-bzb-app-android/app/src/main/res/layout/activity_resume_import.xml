@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_main"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_bar_default_left_imageview" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="horizontal"
+        android:padding="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/resume_attachment_name"
+            android:textColor="@color/text_color_black_666666"
+            android:textSize="@dimen/text_size_13" />
+
+        <TextView
+            android:id="@+id/tv_resume_attachment_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/text_color_blue_53ABD5"
+            android:textSize="@dimen/text_size_13" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/white"
+        android:orientation="horizontal"
+        android:padding="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/current_account"
+            android:textColor="@color/text_color_black_666666"
+            android:textSize="@dimen/text_size_13" />
+
+        <TextView
+            android:id="@+id/tv_current_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/text_color_blue_53ABD5"
+            android:textSize="@dimen/text_size_13" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="@string/import_resume_to_current_account_hint"
+        android:textColor="@color/text_color_grey_9E9E9E"
+        android:textSize="@dimen/text_size_13" />
+
+    <Button
+        android:id="@+id/btn_import"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="45dp"
+        android:layout_marginRight="45dp"
+        android:layout_marginTop="23dp"
+        android:background="@drawable/login_login_btn_bg"
+        android:gravity="center"
+        android:onClick="onClick"
+        android:text="@string/import_now"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_size_13" />
+
+    <FrameLayout
+        android:id="@+id/fl_onImporting"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="45dp"
+        android:layout_marginRight="45dp"
+        android:layout_marginTop="23dp"
+        android:background="@drawable/selector_background_sms_code_unenable"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <ProgressBar
+                android:id="@+id/mpb"
+                android:layout_gravity="center_vertical"
+                style="@style/Widget.MaterialProgressBar.ProgressBar.Large"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginRight="10dp"
+                android:indeterminate="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/on_import"
+                android:textColor="@color/text_color_grey_9E9E9E"
+                android:textSize="@dimen/text_size_13" />
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

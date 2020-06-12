@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_bar_default_left_imageview" />
+
+    <com.baza.android.bzw.widget.LoadingView
+        android:id="@+id/loading_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.handmark.pulltorefresh.library.PullToRefreshListView
+            android:id="@+id/pull_to_refresh_listView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_marginRight="@dimen/dp_15"
+            android:divider="@null"
+            android:scrollbars="none"
+            android:dividerHeight="@dimen/candidate_list_divider_default_height"
+            android:listSelector="@android:color/transparent" />
+
+        <com.baza.android.bzw.widget.ScrollShowImageView
+            android:id="@+id/scroll_show_image_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|bottom"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="@color/text_color_blue_53ABD5"
+            android:clickable="true"
+            android:onClick="onClick"
+            android:src="@drawable/icon_to_top"
+            app:borderWidth="0dp"
+            app:readyShowCount="15"
+            app:rightDistance="20dp"
+            app:rippleColor="@color/color_355986" />
+    </FrameLayout>
+</LinearLayout>

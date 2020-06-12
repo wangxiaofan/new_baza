@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="dialog_background_color">#FFFFFF</color>
+    <color name="dialog_line_color">#E9EAEC</color>
+    <color name="dialog_message_color">#3D5A7D</color>
+    <color name="dialog_cancel_text_color">#4E5968</color>
+    <color name="dialog_sure_text_color">#53ABD5</color>
+
+</resources>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.handmark.pulltorefresh.library.SwipeMenuLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/swipe_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@null">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/view_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/selector_background_click_default_with_bottom_line"
+        android:paddingLeft="@dimen/dp_10"
+        android:paddingRight="@dimen/dp_10">
+
+        <TextView
+            android:id="@+id/tv_label_content"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@null"
+            android:drawableLeft="@drawable/icon_label_group"
+            android:drawablePadding="@dimen/dp_10"
+            android:ellipsize="end"
+            android:enabled="false"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:textColor="@color/text_color_blue_0D315C"
+            android:textColorHint="@color/text_color_grey_9E9E9E"
+            android:textSize="@dimen/text_size_13"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.7" />
+
+        <TextView
+            android:id="@+id/tv_label_count"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:drawableRight="@drawable/icon_arrow_gray_next_samll"
+            android:drawablePadding="15dp"
+            android:ellipsize="end"
+            android:gravity="right|center_vertical"
+            android:maxLines="1"
+            android:textColor="@color/text_color_grey_94A1A5"
+            android:textSize="@dimen/text_size_10"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/tv_label_content"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_delete"
+            android:layout_width="@dimen/dp_80"
+            android:layout_height="match_parent"
+            android:background="@color/text_color_blue_53ABD5"
+            android:drawableTop="@drawable/smart_group_ic_delete"
+            android:drawablePadding="@dimen/dp_5"
+            android:gravity="center"
+            android:padding="@dimen/dp_10"
+            android:text="@string/delete"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_11" />
+    </FrameLayout>
+
+</com.handmark.pulltorefresh.library.SwipeMenuLayout>

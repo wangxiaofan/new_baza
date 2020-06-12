@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="30dp"
+    android:paddingRight="30dp">
+
+
+    <TextView
+        android:id="@+id/tv_hint_no_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="15dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:drawableTop="@drawable/image_no_search_result"
+        android:text="@string/no_value"
+        android:textColor="@color/text_color_gray_a9adb3"
+        android:textSize="@dimen/text_size_13" />
+
+
+</FrameLayout>

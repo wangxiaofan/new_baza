@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="54dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:background="@drawable/background_default_with_top_line"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:id="@+id/rl_tab_home"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="onClick"
+            android:visibility="gone">
+
+            <RadioButton
+                android:id="@+id/rb_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:button="@null"
+                android:checked="true"
+                android:clickable="false"
+                android:drawableTop="@drawable/checker_tab_home"
+                android:enabled="false"
+                android:gravity="center_horizontal"
+                android:text="@string/home"
+                android:textColor="@drawable/home_tab_rb_text_color"
+                android:textSize="@dimen/text_size_10" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/rl_tab_candidate"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="onClick">
+
+            <RadioButton
+                android:id="@+id/rb_candidate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:button="@null"
+                android:clickable="false"
+                android:drawableTop="@drawable/checker_tab_candidate"
+                android:enabled="false"
+                android:gravity="center_horizontal"
+                android:text="@string/candidate"
+                android:textColor="@drawable/home_tab_rb_text_color"
+                android:textSize="@dimen/text_size_10" />
+        </FrameLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/rl_tab_message"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="onClick">
+
+            <RadioButton
+                android:id="@+id/rb_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:clickable="false"
+                android:drawableTop="@drawable/checker_tab_message"
+                android:enabled="false"
+                android:gravity="center_horizontal"
+                android:paddingTop="@dimen/dp_5"
+                android:paddingBottom="@dimen/dp_5"
+                android:text="@string/message"
+                android:textColor="@drawable/home_tab_rb_text_color"
+                android:textSize="@dimen/text_size_10"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/view_has_unread"
+                android:layout_width="@dimen/dp_8"
+                android:layout_height="@dimen/dp_8"
+                android:layout_marginTop="@dimen/dp_5"
+                android:background="@drawable/small_red_doll"
+                android:visibility="gone"
+                app:layout_constraintLeft_toRightOf="@id/rb_message"
+                app:layout_constraintTop_toTopOf="@id/rb_message" />
+
+            <com.tencent.qcloud.tim.uikit.component.UnreadCountTextView
+                android:id="@+id/message_unread"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/view_line"
+                android:layout_alignBottom="@+id/conversation_last_msg"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:textColor="#fff"
+                android:textSize="10sp"
+                android:visibility="gone"
+                app:layout_constraintLeft_toRightOf="@id/rb_message"
+                app:layout_constraintTop_toTopOf="@id/rb_message" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--<FrameLayout-->
+        <!--android:id="@+id/rl_tab_find"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_weight="1"-->
+        <!--android:onClick="onClick">-->
+
+        <!--<RadioButton-->
+        <!--android:id="@+id/rb_find"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:button="@null"-->
+        <!--android:clickable="false"-->
+        <!--android:drawableTop="@drawable/checker_tab_find"-->
+        <!--android:enabled="false"-->
+        <!--android:gravity="center_horizontal"-->
+        <!--android:paddingTop="@dimen/dp_5"-->
+        <!--android:paddingBottom="@dimen/dp_5"-->
+        <!--android:text="@string/tab_find"-->
+        <!--android:textColor="@drawable/home_tab_rb_text_color"-->
+        <!--android:textSize="@dimen/text_size_10" />-->
+
+        <!--</FrameLayout>-->
+
+        <FrameLayout
+            android:id="@+id/rl_tab_account"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="onClick">
+
+            <RadioButton
+                android:id="@+id/rb_account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:button="@null"
+                android:clickable="false"
+                android:drawableTop="@drawable/checker_tab_account"
+                android:enabled="false"
+                android:gravity="center_horizontal"
+                android:paddingTop="@dimen/dp_5"
+                android:paddingBottom="@dimen/dp_5"
+                android:text="@string/tab_account"
+                android:textColor="@drawable/home_tab_rb_text_color"
+                android:textSize="@dimen/text_size_10" />
+
+            <!--<View-->
+            <!--android:id="@+id/view_friend_has_unread"-->
+            <!--android:layout_width="8dp"-->
+            <!--android:layout_height="8dp"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:layout_marginRight="-10dp"-->
+            <!--android:layout_marginTop="-1@dimen/dp_5"-->
+            <!--android:background="@drawable/small_red_doll"-->
+            <!--android:visibility="gone" />-->
+        </FrameLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/bottom_view"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:background="#50000000"
+        android:visibility="gone" />
+
+</RelativeLayout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/group_chat_rel"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/group_chat_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:gravity="bottom"
+        android:textColor="#092E59"
+        android:textSize="14sp" />
+
+    <ImageView
+        android:id="@+id/group_chat_iv"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_alignBottom="@+id/group_chat_tv"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:src="@drawable/btn_zhankai" />
+
+    <com.baza.android.bzw.businesscontroller.message.ScrollViewWithListView
+        android:id="@+id/group_chat_lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/group_chat_tv"
+        android:layout_alignLeft="@+id/group_chat_tv"
+        android:layout_alignRight="@+id/group_chat_iv"
+        android:layout_marginTop="10dp"
+        android:divider="#EEEEEE"
+        android:dividerHeight="0.5dp"
+        android:scrollbars="none"
+        android:visibility="gone" />
+
+    <com.baza.android.bzw.businesscontroller.message.ScrollViewWithListView
+        android:id="@+id/group_chat_lv_min"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/group_chat_lv"
+        android:layout_alignLeft="@+id/group_chat_lv"
+        android:layout_alignRight="@+id/group_chat_lv"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="7dp"
+        android:divider="#EEEEEE"
+        android:dividerHeight="0.5dp"
+        android:scrollbars="none"
+        android:visibility="gone" />
+
+</RelativeLayout>

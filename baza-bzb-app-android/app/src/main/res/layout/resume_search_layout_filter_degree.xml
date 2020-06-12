@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#7F000000">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:orientation="vertical"
+        android:padding="@dimen/dp_20">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="学历要求"
+            android:textColor="#53ABD5"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20">
+
+            <TextView
+                android:id="@+id/tv_degree_one"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_28"
+                android:layout_marginRight="@dimen/dp_8"
+                android:layout_weight="1"
+                android:background="@drawable/checker_background_more_filter"
+                android:gravity="center"
+                android:text="高中及以下"
+                android:textColor="#4E5968"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_degree_two"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_28"
+                android:layout_marginLeft="@dimen/dp_8"
+                android:layout_marginRight="@dimen/dp_8"
+                android:layout_weight="1"
+                android:background="@drawable/checker_background_more_filter"
+                android:gravity="center"
+                android:text="大专"
+                android:textColor="#4E5968"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_degree_three"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_28"
+                android:layout_marginLeft="@dimen/dp_8"
+                android:layout_weight="1"
+                android:background="@drawable/checker_background_more_filter"
+                android:gravity="center"
+                android:text="本科"
+                android:textColor="#4E5968"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_16"
+            android:weightSum="3">
+
+            <TextView
+                android:id="@+id/tv_degree_four"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_28"
+                android:layout_marginRight="@dimen/dp_8"
+                android:layout_weight="1"
+                android:background="@drawable/checker_background_more_filter"
+                android:gravity="center"
+                android:text="硕士"
+                android:textColor="#4E5968"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_degree_five"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_28"
+                android:layout_marginLeft="@dimen/dp_8"
+                android:layout_marginRight="@dimen/dp_8"
+                android:layout_weight="1"
+                android:background="@drawable/checker_background_more_filter"
+                android:gravity="center"
+                android:text="MBA"
+                android:textColor="#4E5968"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_degree_six"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_28"
+                android:layout_marginLeft="@dimen/dp_8"
+                android:layout_weight="1"
+                android:background="@drawable/checker_background_more_filter"
+                android:gravity="center"
+                android:text="博士"
+                android:textColor="#4E5968"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_bar_default_left_imageview" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:text="@string/current_bind_mobile"
+        android:textColor="@color/text_color_gray_a9adb3"
+        android:textSize="@dimen/text_size_11" />
+
+    <TextView
+        android:id="@+id/tv_old_mobile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:textColor="@color/text_color_black_555555"
+        android:textSize="@dimen/text_size_19" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/shape_background_login_edit_text"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:id="@+id/tv_mobile_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="+86"
+            android:textColor="@color/text_color_black_333333"
+            android:textSize="@dimen/text_size_13" />
+
+        <com.baza.android.bzw.widget.ClearEditText
+            android:id="@+id/et_mobile"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="40dp"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:hint="@string/input_new_cellphone"
+            android:inputType="phone"
+            android:maxLength="11"
+            android:textCursorDrawable="@drawable/edit_text_default_cursor"
+            android:textSize="@dimen/text_size_13" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape_background_login_edit_text"
+        android:paddingRight="10dp">
+
+        <Button
+            android:id="@+id/btn_get_sms_code"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:background="@null"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:text="@string/get_sms_code"
+            android:textColor="@color/text_color_blue_53ABD5"
+            android:textSize="@dimen/text_size_13" />
+
+        <com.baza.android.bzw.widget.ClearEditText
+            android:id="@+id/et_sms_code"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="110dp"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:hint="@string/input_sms_check_code"
+            android:inputType="number"
+            android:maxLength="6"
+            android:paddingLeft="15dp"
+            android:textCursorDrawable="@drawable/edit_text_default_cursor"
+            android:textSize="@dimen/text_size_13" />
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/default_button_height"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/login_login_btn_bg"
+        android:gravity="center"
+        android:onClick="onClick"
+        android:text="@string/confirm_modify_cellphone"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_size_13" />
+
+    <TextView
+        android:id="@+id/tv_change_mobile_des"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center_horizontal"
+        android:textColor="@color/text_color_gray_a9adb3"
+        android:textSize="@dimen/text_size_11" />
+</LinearLayout>

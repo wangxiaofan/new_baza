@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:padding="@dimen/dp_10">
+
+    <Button
+        android:id="@+id/btn_get_more"
+        android:layout_width="@dimen/dp_70"
+        android:layout_height="@dimen/dp_24"
+        android:background="@drawable/selector_background_enter_app"
+        android:gravity="center"
+        android:text="@string/get_more"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_size_11"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_msg"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/dp_10"
+        android:gravity="center_vertical"
+        android:text="@string/out_of_request_share_count"
+        android:textColor="@color/text_color_black_666666"
+        android:textSize="@dimen/text_size_13"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/btn_get_more"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

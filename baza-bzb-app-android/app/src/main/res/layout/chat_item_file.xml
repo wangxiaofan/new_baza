@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fl_file_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/iv_file_type"
+        android:layout_width="@dimen/dp_30"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv_file_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_40"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/text_color_blue_0D315C"
+        android:textSize="@dimen/text_size_12" />
+
+    <TextView
+        android:id="@+id/tv_file_des"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="@dimen/dp_40"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/text_color_grey_94A1A5"
+        android:textSize="@dimen/text_size_10" />
+</FrameLayout>

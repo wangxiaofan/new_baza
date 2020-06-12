@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/line_D3DFEF"
+    android:paddingBottom="0.5dp"
+    android:paddingTop="0.5dp">
+
+    <FrameLayout
+        android:id="@+id/fl_group_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white">
+
+        <TextView
+            android:id="@+id/tv_group_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            android:textColor="@color/text_color_grey_9E9E9E"
+            android:textSize="@dimen/text_size_13" />
+
+        <ImageView
+            android:id="@+id/iv_group_collapse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:padding="15dp"
+            android:src="@drawable/arrow_down_small" />
+    </FrameLayout>
+
+    <com.baza.android.bzw.widget.LineBreakLayout
+        android:id="@+id/lbl_group_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fl_group_title"
+        android:background="@android:color/white"
+        android:paddingBottom="10dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="10dp"
+        app:horizontalDepart="10dp"
+        app:lineLimit="2"
+        app:verticalDepart="10dp" />
+</RelativeLayout>

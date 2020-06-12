@@ -1,0 +1,39 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion project.global_compileSdkVersion as int
+    buildToolsVersion project.global_buildToolsVersion
+    defaultConfig {
+        minSdkVersion project.global_minSdkVersion as int
+        targetSdkVersion project.global_targetSdkVersion as int
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        debug {
+            buildConfigField("boolean", "RPC_LOG_ENABLE", "true")
+
+        }
+        xxx {
+            buildConfigField("boolean", "RPC_LOG_ENABLE", "true")
+        }
+        rc {
+            buildConfigField("boolean", "RPC_LOG_ENABLE", "true")
+        }
+        stg {
+            buildConfigField("boolean", "RPC_LOG_ENABLE", "true")
+        }
+
+        release {
+            buildConfigField("boolean", "RPC_LOG_ENABLE", "false")
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+}

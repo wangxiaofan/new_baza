@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp">
+
+        <TextView
+            android:id="@+id/tv_pick_up"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:drawablePadding="5dp"
+            android:drawableRight="@drawable/arrow_down_small"
+            android:gravity="right|center_vertical"
+            android:text="@string/detail"
+            android:textColor="@color/text_color_gray_a9adb3"
+            android:textSize="@dimen/text_size_11" />
+
+        <TextView
+            android:id="@+id/tv_log_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="60dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/text_color_black_333333"
+            android:textSize="@dimen/text_size_13" />
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/iv_pack_up"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/image_log_collse" />
+
+    <TextView
+        android:id="@+id/tv_main_info_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/title_fill_user_info"
+        android:textColor="@color/text_color_black_666666"
+        android:textSize="@dimen/text_size_13" />
+
+    <LinearLayout
+        android:id="@+id/ll_main_info_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:orientation="vertical" />
+
+    <TextView
+        android:id="@+id/tv_education_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/text_candidate_online_lable_education"
+        android:textColor="@color/text_color_black_666666"
+        android:textSize="@dimen/text_size_13" />
+
+    <LinearLayout
+        android:id="@+id/ll_education_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical" />
+
+    <TextView
+        android:id="@+id/tv_work_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/text_candidate_work_experience"
+        android:textColor="@color/text_color_black_666666"
+        android:textSize="@dimen/text_size_13" />
+
+    <LinearLayout
+        android:id="@+id/ll_main_work_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical" />
+
+    <TextView
+        android:id="@+id/tv_project_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/project_experience"
+        android:textColor="@color/text_color_black_666666"
+        android:textSize="@dimen/text_size_13" />
+
+    <LinearLayout
+        android:id="@+id/ll_project_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical" />
+
+    <TextView
+        android:id="@+id/tv_self_evaluation_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/text_candidate_self_des"
+        android:textColor="@color/text_color_black_666666"
+        android:textSize="@dimen/text_size_13" />
+
+    <TextView
+        android:id="@+id/tv_self_evaluation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/text_color_gray_a9adb3"
+        android:textSize="@dimen/text_size_11" />
+
+    <TextView
+        android:id="@+id/tv_self_intentions_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/intentions"
+        android:textColor="@color/text_color_black_666666"
+        android:textSize="@dimen/text_size_13" />
+
+    <LinearLayout
+        android:id="@+id/ll_selfIntentions_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:background="@null" />
+</LinearLayout>

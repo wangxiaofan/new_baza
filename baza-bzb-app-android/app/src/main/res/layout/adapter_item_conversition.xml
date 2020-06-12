@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selector_background_click_default_with_bottom_line"
+    android:padding="@dimen/dp_15">
+
+    <include
+        android:id="@+id/view_avatar"
+        layout="@layout/view_two_level_head_view"
+        android:layout_width="@dimen/dp_40"
+        android:layout_height="@dimen/dp_40"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_color_grey_94A1A5"
+        android:textSize="@dimen/text_size_9"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_un_read_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_background_un_read"
+        android:gravity="center"
+        android:paddingLeft="@dimen/dp_5"
+        android:paddingRight="@dimen/dp_5"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_size_9"
+        android:visibility="gone"
+        app:layout_constraintRight_toRightOf="@id/view_avatar"
+        app:layout_constraintTop_toTopOf="@id/view_avatar" />
+
+    <TextView
+        android:id="@+id/tv_user_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/text_color_blue_0D315C"
+        android:textSize="@dimen/text_size_13"
+        app:layout_constraintLeft_toRightOf="@id/view_avatar"
+        app:layout_constraintRight_toLeftOf="@id/tv_time" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_10"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@id/view_avatar"
+        app:layout_constraintLeft_toRightOf="@id/view_avatar"
+        app:layout_constraintRight_toLeftOf="@id/tv_time">
+
+        <ImageView
+            android:id="@+id/iv_img_msg_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/text_color_grey_94A1A5"
+            android:textSize="@dimen/text_size_10" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/voice_record_touch_ui_height"
+    android:layout_alignParentBottom="true"
+    android:clickable="true"
+    android:visibility="gone">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/voice_pane_shadow" />
+
+    <FrameLayout
+        android:id="@+id/fl_press_to_record"
+        android:layout_width="86dp"
+        android:layout_height="86dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/shape_background_voice_button_normal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawablePadding="10dp"
+            android:drawableTop="@drawable/icon_do_record"
+            android:gravity="center"
+            android:text="@string/press_to_speak"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_9" />
+    </FrameLayout>
+</FrameLayout>

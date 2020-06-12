@@ -1,0 +1,9 @@
+<resources>
+
+
+    <dimen name="default_edit_text_height">25dp</dimen>
+    <dimen name="default_button_height">32dp</dimen>
+    <dimen name="login_wx_wh">32dp</dimen>
+    <dimen name="title_bar_height">40dp</dimen>
+
+</resources>

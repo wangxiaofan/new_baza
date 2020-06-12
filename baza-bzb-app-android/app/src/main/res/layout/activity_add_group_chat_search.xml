@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/group_chat_search_title"
+        layout="@layout/layout_title_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp" />
+
+    <LinearLayout
+        android:id="@+id/group_chat_search_details"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/group_chat_search_title"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/group_chat_search_lin_n"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/group_chat_search_lin_n_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="内部成员"
+                    android:textColor="@color/choose_text_color"
+                    android:textSize="14sp" />
+
+                <View
+                    android:id="@+id/group_chat_search_lin_n_v"
+                    android:layout_width="20dp"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="14dp"
+                    android:background="@drawable/group_chat_search_choose_line_bg" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/group_chat_search_lin_w"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/group_chat_search_lin_w_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="外部成员"
+                    android:textColor="@color/choose_text_color_no"
+                    android:textSize="14sp" />
+
+                <View
+                    android:id="@+id/group_chat_search_lin_w_v"
+                    android:layout_width="20dp"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="14dp"
+                    android:background="@drawable/group_chat_search_choose_line_bg"
+                    android:visibility="invisible" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_null"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="暂无数据"
+            android:textColor="#0D315C"
+            android:textSize="17sp"
+            android:visibility="gone" />
+
+        <ListView
+            android:id="@+id/layout_group_chat_lv_n"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:divider="@null"
+            android:scrollbars="none" />
+
+        <ListView
+            android:id="@+id/layout_group_chat_lv_w"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:divider="@null"
+            android:scrollbars="none"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <include
+        layout="@layout/layout_group_chat_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true" />
+
+</LinearLayout>

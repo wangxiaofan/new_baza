@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--main color-->
+    <color name="main_progress">#53ABD5</color>
+    <color name="default_empty_image">#F5F5F5</color>
+    <!--text color-->
+    <!--text color-->
+    <color name="text_color_black_333333">#333333</color>
+    <color name="text_color_grey_9E9E9E">#9E9E9E</color>
+</resources>
